@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма заказа воздушных шаров</title>
+</head>
+<body>
+<h2>Заявка на заказ <!--suppress HtmlUnknownTarget -->
+    <a href="/WebCourse/Html/balloonsInformation.html">воздушных шаров</a></h2>
+<!--suppress HtmlUnknownTarget -->
+<form action="/handler.php" method="post">
+    <p><label>
+        Имя заказчика <input type="text" name="clientName" placeholder="Имя заказчика" autofocus/>
+    </label></p>
+    <p><label>
+        Фамилия заказчика <input type="text" name="clientLastName" placeholder="Фамилия заказчика"/>
+    </label></p>
+    <p><label>
+        Имя получателя <input type="text" name="receiverName" placeholder="Имя получателя"/>
+    </label></p>
+    <p><label> Тема поздравления
+        <select size="1" name="themes[]">
+            <option value="newYear">Новый год</option>
+            <option selected value="birthday">День рождения</option>
+            <option value="newborn">Выписка из роддома</option>
+            <option value="anniversary">Юбилей</option>
+            <option value="wedding">Свадьба</option>
+            <option value="graduation">Выпускной</option>
+        </select>
+    </label></p>
+    <p><label>
+        <select size="3" multiple name="colors[]">
+            <option disabled>Цветовая гамма</option>
+            <option selected value="blue">Голубой</option>
+            <option value="pink">Розовый</option>
+            <option value="black">Черный</option>
+            <option value="gold">Золотой</option>
+            <option value="silver">Серебряный</option>
+            <option value="white">белый</option>
+            <option value="yellow">Желтый</option>
+            <option value="red">Красный</option>
+            <option value="green">Зеленый</option>
+        </select>
+    </label></p>
+    <fieldset>
+        <legend>Типы шаров</legend>
+        <div><label> Шары стандартные
+            <input checked="checked" type="checkbox" name="balloonsType" value="standard"/>
+        </label></div>
+        <div><label> Шары повышенной прочности
+            <input type="checkbox" name="balloonsType" value="strong"/>
+        </label></div>
+        <div><label> Шары с кофетти
+            <input type="checkbox" name="balloonsType" value="confetti"/>
+        </label></div>
+        <div><label> Шары с рисунком
+            <input type="checkbox" name="balloonsType" value="printed"/>
+        </label></div>
+        <div><label> Шары фольгированные
+            <input type="checkbox" name="balloonsType" value="foil"/>
+        </label></div>
+    </fieldset>
+    <p><label>
+        Надпись (по желанию) <br/><textarea rows="5" cols="45" name="message"></textarea>
+    </label></p>
+    <p><label> Тип доставки <br/>
+        <label><input checked="checked" type="radio" value="courier" name="deliveryType"> курьером </label>
+        <label><input type="radio" value="pickup" name="deliveryType"> самовывоз </label>
+        <label><input type="radio" value="transportCompany" name="deliveryType"> транспортная компания</label>
+    </label></p>
+    <p><label>Дата доставки
+        <input type="date" name="deliveryDate"/>
+    </label></p>
+    <p><label>
+        Комментарии к заказу <br/><textarea rows="5" cols="45" name="orderComments"></textarea>
+    </label></p>
+    <p><label>
+        Адрес электронной почты <input type="email" name="clientEmail">
+    </label></p>
+    <label> Получить скидку
+        <input type="checkbox" name="getDiscount"/>
+    </label>
+    <p>
+        <button type="submit">Отправить заявку</button>
+    </p>
+</form>
+</body>
+</html>

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSS Text/CssText.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSS Text/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSS Text/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS Text/CssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/CssText.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS Text/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS Text/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
-      <workItem from="1668679652044" duration="47293000" />
+      <workItem from="1668679652044" duration="47608000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -91,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668679964231</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Создание CSS Text проекта">
+      <created>1669281955642</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669281955642</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Создание html-проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание html-проекта" />
+    <MESSAGE value="Создание CSS Text проекта" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание CSS Text проекта" />
   </component>
 </project>

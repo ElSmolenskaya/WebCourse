@@ -1,0 +1,56 @@
+.course-information-block {
+    box-sizing: border-box;
+    max-width: 986px;
+    height: auto;
+    background-color: rgb(253 238 213);
+    padding: 6px 14px 5px 15px;
+    font-family: Arial, serif;
+    color: rgb(110 102 105);
+    -webkit-font-smoothing: antialiased;
+}
+
+.header, .paragraph1, .paragraph2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.header {
+    font-size: 37px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.paragraph1 {
+    font-size: 22px;
+    line-height: 0.7em;
+}
+
+.paragraph2 {
+    font-size: 20px;
+    line-height: 1.4em;
+    text-indent: 0.9em;
+    text-align: justify;
+    margin-bottom: 13px;
+}
+
+.blue-text {
+    color: rgb(60 141 180);
+    font-weight: bold;
+}
+
+.line-through-text {
+    text-decoration: line-through;
+}
+
+.extra-space {
+    margin-bottom: 27px;
+}
+
+.normal-space {
+    margin-bottom: 15px;
+}
+
+.minimal-space {
+    margin-bottom: 0;
+}

@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Html/resources/classic.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Html/resources/foil.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Html/resources/helium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Html/resources/lincoluns.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Html/resources/modelling.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Html/resources/surprised.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Html/resources/walking.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS Text/CssText.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS Text/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSS Text/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2HUmhgBqSXrbqPOYEqeKlW2J0Xd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -29,15 +40,26 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/CSS Text/fonts",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CSS Text/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CSS Text" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
-      <workItem from="1668679652044" duration="308000" />
+      <workItem from="1668679652044" duration="47293000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -62,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668679911388</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Создание html-проекта">
+      <created>1668679964231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668679964231</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

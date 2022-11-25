@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CSS Text/CssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/CssText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Text/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS Text/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CssTable/cssTable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CssTable/cssTableStyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CssTable/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CssTable/ofont.ru_St.Sign.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CssText/CssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssText.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CssText/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssTextStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/resources/surprised.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/CSS Text/fonts",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/CssTable",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -53,9 +59,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CssTable" />
       <recent name="$PROJECT_DIR$/CSS Text/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CssTable" />
       <recent name="$PROJECT_DIR$/CSS Text" />
     </key>
   </component>
@@ -67,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
-      <workItem from="1668679652044" duration="47608000" />
+      <workItem from="1668679652044" duration="61208000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -97,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669281955642</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Переименование CssText проекта">
+      <created>1669282038466</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669282038466</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +133,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Создание html-проекта" />
     <MESSAGE value="Создание CSS Text проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание CSS Text проекта" />
+    <MESSAGE value="Переименование CssText проекта" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переименование CssText проекта" />
   </component>
 </project>

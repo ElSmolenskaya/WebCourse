@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "St.Sign Normal";
+    src: url("ofont.ru_St.Sign.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.table-base {
+    font-family: "St.Sign Normal", serif;
+    font-size: 25px;
+    border-collapse: collapse;
+}
+
+.table-base th, td {
+    border: 1px solid rgb(206 206 206);
+    padding-left: 11px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+}
+
+.table-base th {
+    color: rgb(253 254 255);
+    background-color: rgb(59 152 222);
+    text-align: left;
+}
+
+.table-base td {
+    color: rgb(75 74 74);
+    font-weight: lighter;
+}
+
+.table-body tr:nth-child(2n+1) {
+    background-color: rgb(238 238 238);
+}
+
+.table-body td:nth-child(1), .table-body td:nth-child(2) {
+    width: 202px;
+}
+
+.table-body td:nth-child(3) {
+    width: 360px;
+}
+
+.table-body td:nth-child(4) {
+    width: 232px;
+}

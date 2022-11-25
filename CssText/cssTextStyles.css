@@ -1,5 +1,8 @@
-.course-information-block {
+* {
     box-sizing: border-box;
+}
+
+.course-information-block {
     max-width: 986px;
     height: auto;
     background-color: rgb(253 238 213);

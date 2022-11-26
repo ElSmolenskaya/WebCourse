@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS форма</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="cssFormStyles.css">
+</head>
+<body>
+<p class="header">Отправить заявку</p>
+<!--suppress HtmlUnknownTarget -->
+<form class="form" action="/handler.php" method="post">
+    <label>Ваше имя<br>
+        <input type="text" name="clientName" placeholder="Ваше имя *" autofocus>
+    </label>
+    <br/>
+    <label>Ваш номер телефона<br>
+        <input type="text" name="clientTelephoneNumber" placeholder="Ваш номер телефона *" autofocus>
+    </label>
+    <br/>
+    <label>Ваш email или VK<br>
+        <input type="text" name="clientEmail" placeholder="Ваш email или VK *" autofocus>
+    </label>
+    <br/>
+    <label>Комментарий<br>
+        <textarea rows="5" cols="45" name="clientComment" placeholder="Комментарий (не обязательно)"></textarea>
+    </label>
+    <p>Заполните и отправьте форму, и мы перезвоним Вам по указанному номеру</p>
+    <div>
+        <button type="submit">Отправить заявку</button>
+    </div>
+</form>
+</body>
+</html>

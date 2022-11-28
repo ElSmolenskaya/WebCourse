@@ -33,7 +33,7 @@
     font-weight: lighter;
 }
 
-.table-body tr:nth-child(2n+1) {
+.table-body tr:nth-child(odd) {
     background-color: rgb(238 238 238);
 }
 

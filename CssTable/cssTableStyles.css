@@ -10,41 +10,41 @@
 }
 
 .table-base {
-    font-family: "St.Sign Normal", serif;
-    font-size: 25px;
+    font-family: "St.Sign Normal", sans-serif;
+    font-size: 21px;
     border-collapse: collapse;
 }
 
-.table-base th, td {
-    border: 1px solid rgb(206 206 206);
-    padding-left: 11px;
-    padding-top: 16px;
-    padding-bottom: 14px;
+.table-base th,
+.table-base td {
+    border: 1px solid #cecece;
+    padding: 15px 11px 11px 11px;
 }
 
 .table-base th {
-    color: rgb(253 254 255);
-    background-color: rgb(59 152 222);
+    color: #fdfeff;
+    background-color: #3b98de;
     text-align: left;
 }
 
 .table-base td {
-    color: rgb(75 74 74);
+    color: #4b4a4a;
     font-weight: lighter;
 }
 
-.table-body tr:nth-child(odd) {
-    background-color: rgb(238 238 238);
+.table-base tr:nth-child(odd) {
+    background-color: #eeeeee;
 }
 
-.table-body td:nth-child(1), .table-body td:nth-child(2) {
-    width: 202px;
+.first-name,
+.last-name {
+    width: 174px;
 }
 
-.table-body td:nth-child(3) {
-    width: 360px;
+.job-title {
+    width: 309px;
 }
 
-.table-body td:nth-child(4) {
-    width: 232px;
+.twitter {
+    width: 200px;
 }

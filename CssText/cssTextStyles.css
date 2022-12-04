@@ -25,7 +25,10 @@
     margin: auto;
 }
 
-.header, .price-block, .description-block, .course-information-block p {
+.header,
+.price-block,
+.description-block,
+.course-information-block p {
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
@@ -64,7 +67,8 @@
     margin-bottom: 24px;
 }
 
-.price-block p:last-of-type, .description-block p {
+.price-block p:last-of-type,
+.description-block p {
     margin-bottom: 12px;
 }
 

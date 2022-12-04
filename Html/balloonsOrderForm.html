@@ -5,8 +5,8 @@
     <title>Форма заказа воздушных шаров</title>
 </head>
 <body>
-<h2>Заявка на заказ <!--suppress HtmlUnknownTarget -->
-    <a href="/WebCourse/Html/balloonsInformation.html">воздушных шаров</a>
+<h2>Заявка на заказ
+    <a href="balloonsInformation.html">воздушных шаров</a>
 </h2>
 <!--suppress HtmlUnknownTarget -->
 <form action="/handler.php" method="post">
@@ -56,28 +56,33 @@
     <fieldset>
         <legend>Типы шаров</legend>
         <div>
-            <label> Шары стандартные
+            <label>
                 <input checked="checked" type="checkbox" name="balloonsType" value="standard">
+                Шары стандартные
             </label>
         </div>
         <div>
-            <label> Шары повышенной прочности
+            <label>
                 <input type="checkbox" name="balloonsType" value="strong">
+                Шары повышенной прочности
             </label>
         </div>
         <div>
-            <label> Шары с кофетти
+            <label>
                 <input type="checkbox" name="balloonsType" value="confetti">
+                Шары с кофетти
             </label>
         </div>
         <div>
-            <label> Шары с рисунком
+            <label>
                 <input type="checkbox" name="balloonsType" value="printed">
+                Шары с рисунком
             </label>
         </div>
         <div>
-            <label> Шары фольгированные
+            <label>
                 <input type="checkbox" name="balloonsType" value="foil">
+                Шары фольгированные
             </label>
         </div>
     </fieldset>
@@ -88,14 +93,17 @@
     </p>
     <p>
         <label> Тип доставки:<br>
-            <label> курьером
+            <label>
                 <input checked="checked" type="radio" value="courier" name="deliveryType">
+                курьером
             </label>
-            <label> самовывоз
+            <label>
                 <input type="radio" value="pickup" name="deliveryType">
+                самовывоз
             </label>
-            <label> транспортная компания
+            <label>
                 <input type="radio" value="transportCompany" name="deliveryType">
+                транспортная компания
             </label>
         </label>
     </p>

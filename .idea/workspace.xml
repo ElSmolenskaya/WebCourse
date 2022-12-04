@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Gabriel/gabriel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gabriel/gabrielStyles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Gabriel/normalize.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssTextStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssTextStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/balloonsInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/balloonsInformation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html/balloonsOrderForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Html/balloonsOrderForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="33809000" />
+      <workItem from="1669383275744" duration="35197000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -142,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669610494830</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Исправлены ошибки в модуле CssText">
+      <created>1670159936092</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670159936092</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +172,7 @@
     <MESSAGE value="Создание модуля CssForm" />
     <MESSAGE value="Исправлены ошибки в модуле Html" />
     <MESSAGE value="Исправлены ошибки в модуле CssTable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле CssTable" />
+    <MESSAGE value="Исправлены ошибки в модуле CssText" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле CssText" />
   </component>
 </project>

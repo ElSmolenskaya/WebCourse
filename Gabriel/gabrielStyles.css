@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.form {
+    max-width: 910px;
+    height: auto;
+    font-size: 19px;
+    background-color: rgb(253 238 213);
+    padding-top: 22px;
+    padding-right: 24px;
+    padding-bottom: 19px;
+}

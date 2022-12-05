@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+.parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
 @font-face {
     font-family: "St.Sign Normal";
     src: url("ofont.ru_St.Sign.ttf") format("truetype");
@@ -9,30 +18,35 @@
     font-weight: normal;
 }
 
-.table-base {
+.table {
     font-family: "St.Sign Normal", sans-serif;
     font-size: 21px;
     border-collapse: collapse;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
-.table-base th,
-.table-base td {
+.table th,
+.table td {
     border: 1px solid #cecece;
     padding: 15px 11px 11px 11px;
 }
 
-.table-base th {
+.table th {
     color: #fdfeff;
     background-color: #3b98de;
     text-align: left;
 }
 
-.table-base td {
+.table td {
     color: #4b4a4a;
     font-weight: lighter;
 }
 
-.table-base tr:nth-child(odd) {
+.table tr:nth-child(odd) {
     background-color: #eeeeee;
 }
 

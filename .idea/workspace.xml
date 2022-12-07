@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ArraysPractice/arraysPractice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ArraysPractice/arraysPractice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssForm/cssForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssForm/cssForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssForm/cssFormStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssForm/cssFormStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -74,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="53782000" />
+      <workItem from="1669383275744" duration="67914000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -174,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670215116486</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Исправлены ошибки в модуле CssForm">
+      <created>1670244990202</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670244990202</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +209,7 @@
     <MESSAGE value="Исправлены ошибки в модуле Html" />
     <MESSAGE value="Исправлены ошибки в модуле CssText" />
     <MESSAGE value="Исправлены ошибки в модуле CssTable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле CssTable" />
+    <MESSAGE value="Исправлены ошибки в модуле CssForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле CssForm" />
   </component>
 </project>

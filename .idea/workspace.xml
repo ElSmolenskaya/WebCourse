@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ObjectsPractice/objectsPractice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjectsPractice/objectsPractice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssForm/cssFormStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssForm/cssFormStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssTable/cssTable.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssTable/cssTable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssTable/cssTableStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssTable/cssTableStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssTextStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssTextStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ArraysPractice/arraysPractice.js" beforeDir="false" afterPath="$PROJECT_DIR$/ArraysPractice/arraysPractice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="70319000" />
+      <workItem from="1669383275744" duration="75264000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -192,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670419522957</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Исправлены ошибки в модуле CssTable">
+      <created>1670472045647</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670472045647</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,9 +223,9 @@
     <MESSAGE value="Создание модуля CssForm" />
     <MESSAGE value="Исправлены ошибки в модуле Html" />
     <MESSAGE value="Исправлены ошибки в модуле CssText" />
-    <MESSAGE value="Исправлены ошибки в модуле CssTable" />
     <MESSAGE value="Исправлены ошибки в модуле CssForm" />
     <MESSAGE value="Создание модуля ArraysPractice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание модуля ArraysPractice" />
+    <MESSAGE value="Исправлены ошибки в модуле CssTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле CssTable" />
   </component>
 </project>

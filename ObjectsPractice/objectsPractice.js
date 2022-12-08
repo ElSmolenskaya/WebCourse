@@ -1,4 +1,26 @@
 (function () {
+    function getMaximalCitiesCountCountries(countries) {
+        var maximalCitiesCount = countries.reduce(function (maximalCitiesCount, country) {
+            return Math.max(country["cities"].length, maximalCitiesCount);
+        }, 0);
+
+        return countries.filter(function (country) {
+            return country["cities"].length === maximalCitiesCount;
+        }).map(function (country) {
+            return country.name;
+        });
+    }
+
+    function getCountriesPopulation(countries) {
+        return countries.map(function (country) {
+            var citiesPopulation = country["cities"].reduce(function (summa, city) {
+                return summa + city["population"];
+            }, 0);
+
+            return ({population: citiesPopulation, name: country["name"]});
+        });
+    }
+
     var countries = [
         {
             name: "Australia",
@@ -40,15 +62,13 @@
         }
     ];
 
-    var maxCitiesCount = countries.reduce(function (maxCitiesCount, country) {
-        return Math.max(country["cities"].length, maxCitiesCount);
-    }, 0);
+    console.log("Страны с максимальным количеством городов: " + getMaximalCitiesCountCountries(countries));
 
-    console.log("Максимальное количество городов в стране: " + maxCitiesCount);
+    console.log("Суммарное население городов по странам:");
 
-    var maxCitiesCountCountries = countries.filter(function (country) {
-        return country["cities"].length === maxCitiesCount;
+    var countriesPopulation = getCountriesPopulation(countries);
+
+    countriesPopulation.forEach(function (country) {
+        console.log(country.name + " " + country.population)
     });
-
-    console.log("Страны с максимальным количеством городов: " + maxCitiesCountCountries);
 })();

@@ -1,14 +1,10 @@
 (function () {
     function getEvenNumbersSquares(numbers) {
-        var evenNumbersSquares = [];
-
-        numbers.filter(function (number) {
+        return numbers.filter(function (number) {
             return number % 2 === 0;
-        }).forEach(function (number) {
-            evenNumbersSquares.push(number * number);
+        }).map(function (number) {
+            return number * number;
         });
-
-        return evenNumbersSquares;
     }
 
     function getEvenNumbersSum(numbers) {

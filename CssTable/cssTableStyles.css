@@ -2,15 +2,6 @@
     box-sizing: border-box;
 }
 
-.parent {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: auto;
-}
-
 @font-face {
     font-family: "St.Sign Normal";
     src: url("ofont.ru_St.Sign.ttf") format("truetype");
@@ -22,7 +13,6 @@
     font-family: "St.Sign Normal", sans-serif;
     font-size: 21px;
     border-collapse: collapse;
-    position: absolute;
     top: 0;
     right: 0;
     left: 0;
@@ -47,7 +37,7 @@
 }
 
 .table tr:nth-child(odd) {
-    background-color: #eeeeee;
+    background-color: #eee;
 }
 
 .first-name,

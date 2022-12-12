@@ -29,12 +29,10 @@
     font-size: 32px;
     line-height: 1.06em;
     text-transform: uppercase;
-    margin-bottom: 18px;
 }
 
 .price-block {
     font-size: 19px;
-    line-height: 0.7em;
 }
 
 .description-block {
@@ -53,13 +51,17 @@
     text-decoration: line-through;
 }
 
-.extra-space {
-    margin-bottom: 24px;
+.normal-space,
+.description-block p {
+    margin-bottom: 11px;
 }
 
-.price-block p:last-of-type,
-.description-block p {
-    margin-bottom: 12px;
+.extra-space {
+    margin-bottom: 14px;
+}
+
+.price-block p:last-of-type {
+    margin-bottom: 8px;
 }
 
 .description-block p:last-of-type {

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TodoList/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoList/todoList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoList/todoListScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoList/todoListStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssText.html" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssText.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssTextStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssTextStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -45,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/Gabriel",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/TodoList",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -55,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TodoList" />
       <recent name="$PROJECT_DIR$/Gabriel" />
       <recent name="$PROJECT_DIR$/CssForm" />
       <recent name="$PROJECT_DIR$/CssTable" />
@@ -75,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="84622000" />
+      <workItem from="1669383275744" duration="104215000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -210,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670494995093</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Исправлены ошибки в модуле CssText">
+      <created>1670838750651</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670838750651</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,12 +245,12 @@
     <MESSAGE value="Создание проекта CssTable" />
     <MESSAGE value="Создание модуля CssForm" />
     <MESSAGE value="Исправлены ошибки в модуле Html" />
-    <MESSAGE value="Исправлены ошибки в модуле CssText" />
     <MESSAGE value="Исправлены ошибки в модуле CssForm" />
     <MESSAGE value="Создание модуля ArraysPractice" />
     <MESSAGE value="Исправлены ошибки в модуле CssTable" />
     <MESSAGE value="Исправлены ошибки в модуле ArraysPractice" />
     <MESSAGE value="Разработка модуля ObjectsPractice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Разработка модуля ObjectsPractice" />
+    <MESSAGE value="Исправлены ошибки в модуле CssText" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле CssText" />
   </component>
 </project>

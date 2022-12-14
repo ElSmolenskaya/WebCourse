@@ -8,12 +8,12 @@
     }
 
     function getEvenNumbersSum(numbers) {
-        return numbers.reduce(function (summa, number) {
+        return numbers.reduce(function (sum, number) {
             if (number % 2 === 0) {
-                return summa + number;
+                return sum + number;
             }
 
-            return summa;
+            return sum;
         }, 0);
     }
 

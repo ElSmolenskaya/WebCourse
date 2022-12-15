@@ -1,24 +1,24 @@
 (function () {
-    function getMaximalCitiesCountCountries(countries) {
-        var maximalCitiesCount = countries.reduce(function (maximalCitiesCount, country) {
-            return Math.max(country["cities"].length, maximalCitiesCount);
+    function getMaxCitiesCountCountries(countries) {
+        var maxCitiesCount = countries.reduce(function (maxCitiesCount, country) {
+            return Math.max(country.cities.length, maxCitiesCount);
         }, 0);
 
         return countries.filter(function (country) {
-            return country["cities"].length === maximalCitiesCount;
-        }).map(function (country) {
-            return country.name;
+            return country.cities.length === maxCitiesCount;
         });
     }
 
     function getCountriesPopulation(countries) {
-        return countries.map(function (country) {
-            var citiesPopulation = country["cities"].reduce(function (summa, city) {
-                return summa + city["population"];
-            }, 0);
+        var countriesPopulation = {};
 
-            return ({population: citiesPopulation, name: country["name"]});
+        countries.forEach(function (country) {
+            countriesPopulation[country.name] = country.cities.reduce(function (countryPopulation, city) {
+                return countryPopulation + city.population;
+            }, 0);
         });
+
+        return countriesPopulation;
     }
 
     var countries = [
@@ -62,13 +62,19 @@
         }
     ];
 
-    console.log("Страны с максимальным количеством городов: " + getMaximalCitiesCountCountries(countries));
+    var maxCitiesCountCountries = getMaxCitiesCountCountries(countries);
+
+    console.log("Страны с максимальным количеством городов: ");
+
+    maxCitiesCountCountries.forEach(function (country) {
+        console.log(country.name);
+    });
 
     console.log("Суммарное население городов по странам:");
 
     var countriesPopulation = getCountriesPopulation(countries);
 
-    countriesPopulation.forEach(function (country) {
-        console.log(country.name + " " + country.population)
-    });
+    for (var countryName in countriesPopulation) {
+        console.log(countryName + " - " + countriesPopulation[countryName]);
+    }
 })();

@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ArraysPractice/arraysPractice.js" beforeDir="false" afterPath="$PROJECT_DIR$/ArraysPractice/arraysPractice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssForm/cssFormStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssForm/cssFormStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssTable/cssTableStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssTable/cssTableStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CssText/cssTextStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CssText/cssTextStyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemperatureConverter/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectsPractice/objectsPractice.js" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectsPractice/objectsPractice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/TodoList",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/TemperatureConverter",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,11 +58,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TemperatureConverter" />
       <recent name="$PROJECT_DIR$/TodoList" />
       <recent name="$PROJECT_DIR$/Gabriel" />
       <recent name="$PROJECT_DIR$/CssForm" />
       <recent name="$PROJECT_DIR$/CssTable" />
-      <recent name="$PROJECT_DIR$/CSS Text/fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Html/resources" />
@@ -77,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="104561000" />
+      <workItem from="1669383275744" duration="108513000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -226,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671028469170</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Исправлены мелкие ошибки в css-файлах">
+      <created>1671028822125</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1671028822125</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +267,7 @@
     <MESSAGE value="Разработка модуля ObjectsPractice" />
     <MESSAGE value="Исправлены ошибки в модуле CssText" />
     <MESSAGE value="Создание модуля TodoList" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание модуля TodoList" />
+    <MESSAGE value="Исправлены мелкие ошибки в css-файлах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены мелкие ошибки в css-файлах" />
   </component>
 </project>

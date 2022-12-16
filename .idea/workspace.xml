@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TemperatureConverter/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObjectsPractice/objectsPractice.js" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectsPractice/objectsPractice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemperatureConverter/temperatureConverter.html" beforeDir="false" afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoList/todoListStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList/todoListStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="108513000" />
+      <workItem from="1669383275744" duration="127262000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -235,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671028822125</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Исправлены ошибьки в модуле ObjectsPractice">
+      <created>1671090045958</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671090045958</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +274,7 @@
     <MESSAGE value="Исправлены ошибки в модуле CssText" />
     <MESSAGE value="Создание модуля TodoList" />
     <MESSAGE value="Исправлены мелкие ошибки в css-файлах" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены мелкие ошибки в css-файлах" />
+    <MESSAGE value="Исправлены ошибьки в модуле ObjectsPractice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибьки в модуле ObjectsPractice" />
   </component>
 </project>

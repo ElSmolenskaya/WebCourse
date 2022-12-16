@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+.temperature-converter-block {
+    width: 480px;
+    background-color: #cecece;
+    padding: 5px 20px;
+    font-family: Arial, sans-serif;
+    color: #4b4a4a;
+    margin: auto;
+}
+
+.temperature-converter-block form > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.temperature-converter-block h1 {
+    width: 350px;
+    margin: 0 auto 8px;
+    size: 25px;
+    color: #205067;
+}
+
+.degrees-caption {
+    width: 180px;
+    color: #3c8db4;
+    font-weight: bold;
+}
+
+.temperature-converter-block form {
+    height: 35px;
+}
+
+.temperature-converter-block label {
+    padding-top: 3px;
+}
+
+.temperature-converter-block table {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.temperature-converter-block th,
+.temperature-converter-block td {
+    padding-left: 0;
+    padding-bottom: 10px;
+}
+
+.table-degrees#fahrenheit-degrees,
+.table-degrees#kelvin-degrees {
+    padding-left: 4px;
+}
+
+.temperature-converter-block input[type=number]::-webkit-inner-spin-button,
+.temperature-converter-block input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error-message {
+    color: #f00;
+    display: none;
+    font-size: 15px;
+}
+
+.invalid {
+    border-color: #f00;
+}
+
+.invalid ~ .error-message {
+    display: block;
+}
+
+.temperature-converter-block button {
+    color: #fdfeff;
+    background-color: #3b98de;
+}
+
+.temperature-converter-block button:hover {
+    cursor: pointer;
+    background-color: #205067;
+}

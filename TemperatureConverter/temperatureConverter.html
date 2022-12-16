@@ -8,6 +8,26 @@
     <script defer src="temperatureConverterScript.js"></script>
 </head>
 <body>
-
+<div class="temperature-converter-block">
+    <h1>Temperature converter</h1>
+    <form id="form">
+        <label for="celsius-degrees" class="degrees-caption">Enter celsius degrees:</label>
+        <div>
+            <input id="celsius-degrees" type="number" step="any">
+            <div class="error-message">Field is required</div>
+        </div>
+        <button id="convert-button" type="submit">Convert</button>
+    </form>
+    <table>
+        <tr>
+            <td class="degrees-caption">Fahrenheit degrees:</td>
+            <td class="table-degrees" id="fahrenheit-degrees"></td>
+        </tr>
+        <tr>
+            <td class="degrees-caption">Kelvin degrees:</td>
+            <td class="table-degrees" id="kelvin-degrees"></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

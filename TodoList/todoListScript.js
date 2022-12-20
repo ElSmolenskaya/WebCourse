@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-    })
+    });
 
     addButton.addEventListener("click", function () {
         var newTodoText = newTodoTextInput.value.trim();
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (newTodoText.length === 0) {
             newTodoTextInput.classList.add("invalid");
+
             return;
         }
 
@@ -39,10 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (editedTodoText.length === 0) {
                     editTodoTextInput.classList.add("invalid");
+
                     return;
                 }
 
                 newTodoText = editedTodoText;
+
                 setViewMode();
             });
 

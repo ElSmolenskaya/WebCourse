@@ -11,7 +11,7 @@
     margin: auto;
 }
 
-.form > * {
+.todo-list-block form > * {
     display: inline-block;
     vertical-align: top;
 }
@@ -23,14 +23,14 @@
     color: #205067;
 }
 
-.form {
+.todo-list-block form {
     margin-left: auto;
     margin-right: auto;
     height: 35px;
     width: 310px;
 }
 
-.form label {
+.todo-list-block label {
     padding-top: 3px;
 }
 

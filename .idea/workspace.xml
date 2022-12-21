@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TodoListJQuery/jquery-3.6.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListJQuery/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQuery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook/jquery-3.6.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook/phoneBook.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoList/todoListScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList/todoListScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoListJQuery/todoListJQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQuery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/TodoListJQuery",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/PhoneBook",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -62,11 +63,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PhoneBook" />
       <recent name="$PROJECT_DIR$/TodoListJQuery" />
       <recent name="$PROJECT_DIR$/TemperatureConverter" />
       <recent name="$PROJECT_DIR$/TodoList" />
       <recent name="$PROJECT_DIR$/Gabriel" />
-      <recent name="$PROJECT_DIR$/CssForm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TodoListJQuery" />
@@ -84,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="140819000" />
+      <workItem from="1669383275744" duration="150624000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -254,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671197049176</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Создание модуля TodoListJQuery">
+      <created>1671523128954</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1671523128954</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +297,7 @@
     <MESSAGE value="Исправлены мелкие ошибки в css-файлах" />
     <MESSAGE value="Исправлены ошибьки в модуле ObjectsPractice" />
     <MESSAGE value="Создание модуля TemperatureConverter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание модуля TemperatureConverter" />
+    <MESSAGE value="Создание модуля TodoListJQuery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание модуля TodoListJQuery" />
   </component>
 </project>

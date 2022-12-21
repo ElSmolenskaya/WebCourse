@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 
-.todo-list-block {
-    width: 390px;
+.phonebook-block {
+    width: 500px;
     background-color: #cecece;
     padding: 5px 15px;
     font-family: Arial, sans-serif;
@@ -11,35 +11,46 @@
     margin: auto;
 }
 
-.todo-list-block form > * {
+.fields-block > * {
     display: inline-block;
     vertical-align: top;
 }
 
-.todo-list-block h1 {
+.phonebook-block h1 {
     width: 150px;
     margin: 0 auto 8px;
     size: 25px;
     color: #205067;
 }
 
-.todo-list-block form {
-    margin-left: auto;
-    margin-right: auto;
-    height: 35px;
-    width: 310px;
+.phonebook-block form {
+    margin: auto;
+    width: 355px;
 }
 
-.todo-list-block label {
+.phonebook-block label {
     padding-top: 3px;
+    width: 150px;
 }
 
-.todo-list-block button {
+.phonebook-block input {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.phonebook-block button {
     color: #fdfeff;
     background-color: #3b98de;
+    padding: 2px 25px;
+    margin-right: 1px;
 }
 
-.todo-list-block button:hover {
+.add-button {
+    display: flex;
+    justify-content: right;
+}
+
+.phonebook-block button:hover {
     cursor: pointer;
     background-color: #205067;
 }

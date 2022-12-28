@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PhoneBook/jquery-3.6.2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/phoneBook.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/phoneBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoList/todoList.html" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList/todoList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoList/todoListScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList/todoListScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoList/todoListStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList/todoListStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoListJQuery/todoListJQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQuery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="150624000" />
+      <workItem from="1669383275744" duration="210511000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -262,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671523128954</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Создание модуля Phonebook">
+      <created>1671615886077</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1671615886077</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +307,7 @@
     <MESSAGE value="Исправлены ошибьки в модуле ObjectsPractice" />
     <MESSAGE value="Создание модуля TemperatureConverter" />
     <MESSAGE value="Создание модуля TodoListJQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание модуля TodoListJQuery" />
+    <MESSAGE value="Создание модуля Phonebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание модуля Phonebook" />
   </component>
 </project>

@@ -35,7 +35,10 @@
 
 .phonebook-block input {
     width: 200px;
-    margin-bottom: 15px;
+}
+
+.fields-block div {
+    height: 40px;
 }
 
 .phonebook-block button {
@@ -58,18 +61,19 @@
 .error-message {
     color: #f00;
     display: none;
+    font-size: 13px;
 }
 
 .invalid {
     border-color: #f00;
 }
 
-.todo-item-text {
-    padding-right: 5px;
-}
-
 .invalid ~ .error-message {
     display: block;
+}
+
+.todo-item-text {
+    padding-right: 5px;
 }
 
 .todo-item + .todo-item {

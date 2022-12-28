@@ -3,40 +3,68 @@
 }
 
 .todo-list-block {
-    width: 390px;
+    width: 80%;
     background-color: #cecece;
-    padding: 5px 15px;
+    padding: 5px 25px;
     font-family: Arial, sans-serif;
     color: #4b4a4a;
     margin: auto;
 }
 
-.todo-list-block form > * {
-    display: inline-block;
-    vertical-align: top;
-}
-
 .todo-list-block h1 {
-    width: 150px;
-    margin: 0 auto 8px;
-    size: 25px;
+    margin-bottom: 16px;
+    font-size: 30px;
     color: #205067;
+    text-align: center;
 }
 
-.todo-list-block form {
-    margin-left: auto;
-    margin-right: auto;
-    height: 35px;
-    width: 310px;
+.todo-list-block form,
+.todo-text-line,
+.todo-list {
+    display: flex;
+}
+
+.todo-list li {
+    display: list-item;
+}
+
+.todo-text-line,
+.todo-text-line div,
+.todo-list,
+.todo-item-text,
+.todo-list-block input,
+.todo-list ul,
+.todo-list li {
+    width: 100%;
+}
+
+.todo-text-line div {
+    padding: 2px;
 }
 
 .todo-list-block label {
+    min-width: 100px;
     padding-top: 3px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .todo-list-block button {
+    margin: 2px 2px 0 5px;
     color: #fdfeff;
     background-color: #3b98de;
+    height: 24px;
+    min-width: 70px;
+}
+
+.todo-list-block h1,
+.todo-list-block label {
+    margin-left: 20px;
+}
+
+.todo-item-text {
+    margin-top: 5px;
+    margin-bottom: 24px;
 }
 
 .todo-list-block button:hover {
@@ -45,22 +73,17 @@
 }
 
 .error-message {
+    font-size: 13px;
     color: #f00;
-    display: none;
+    display: block;
+    opacity: 0;
 }
 
 .invalid {
     border-color: #f00;
 }
 
-.todo-item-text {
-    padding-right: 5px;
-}
-
 .invalid ~ .error-message {
     display: block;
-}
-
-.todo-item + .todo-item {
-    margin-top: 5px;
+    opacity: 1;
 }

@@ -12,14 +12,20 @@
 <div class="todo-list-block">
     <h1>Todo List</h1>
     <form id="form">
-        <label for="new-todo-text">Enter text:</label>
-        <div>
-            <input id="new-todo-text" type="text">
-            <div class="error-message">Field is required</div>
+        <div class="todo-text-line">
+            <label for="new-todo-text">Enter text:</label>
+            <div>
+                <input id="new-todo-text" type="text">
+                <div class="error-message">Field is required</div>
+            </div>
         </div>
-        <button id="add-button" type="submit">Add</button>
+        <div>
+            <button id="add-button" type="submit">Add</button>
+        </div>
     </form>
-    <ul id="todo-list"></ul>
+    <div class="todo-list">
+        <ul id="todo-list"></ul>
+    </div>
 </div>
 </body>
 </html>

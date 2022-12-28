@@ -19,10 +19,10 @@ $(function () {
         }
 
         function setEditMode() {
-            todoItem.html("<input class='edit-todo-item' type='text'>\
-                <button class = 'save-button' type = 'button'>Save</button>\
-                <button class = 'cancel-button' type = 'button'>Cancel</button>\
-                <div class='error-message'>Field is required</div>");
+            todoItem.html("<div class='todo-text-line'><div><input class='edit-todo-item' type='text'>\
+                <div class='error-message'>Field is required</div></div>\
+                <button class='save-button' type='button'>Save</button>\
+                <button class='cancel-button' type='button'>Cancel</button></div>");
 
             var editTodoTextInput = todoItem.find(".edit-todo-item");
             editTodoTextInput.val(newTodoText);
@@ -57,9 +57,9 @@ $(function () {
         }
 
         function setViewMode() {
-            todoItem.html("<span class = 'todo-item-text'></span>\
-            <button class = 'edit-button' type = 'button'>Edit</button>\
-            <button class = 'delete-button' type = 'button'>Delete</button>");
+            todoItem.html("<div class='todo-text-line'><span class='todo-item-text'></span>\
+                <button class='edit-button' type='button'>Edit</button>\
+                <button class='delete-button' type='button'>Delete</button></div>");
 
             todoItem.find(".todo-item-text").text(newTodoText);
 

@@ -1,48 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
+    var temperatureConverterForm = document.getElementById("form");
     var convertButton = document.getElementById("convert-button");
-    var celsiusDegreesNumberInput = document.getElementById("celsius-degrees");
-    var fahrenheitDegreesText = document.getElementById("fahrenheit-degrees");
-    var kelvinDegreesText = document.getElementById("kelvin-degrees");
-    var celsiusDegreesValue;
+    var celsiusValueInput = document.getElementById("celsius-value");
+    var fahrenheitValueText = document.getElementById("fahrenheit-value");
+    var kelvinValueText = document.getElementById("kelvin-value");
+    var errorMessageText = document.getElementById("error-message");
+    var celsiusValue;
 
-    form.addEventListener("submit", function (e) {
+    temperatureConverterForm.addEventListener("submit", function (e) {
         e.preventDefault();
-    })
+    });
 
-    function getFahrenheitDegrees(celsiusDegrees) {
-        var coefficient = 1.8;
-        var difference = 32;
-
-        return celsiusDegrees * coefficient + difference;
+    function getFahrenheitDegrees(celsiusValue) {
+        return celsiusValue * 1.8 + 32;
     }
 
-    function getKelvinDegrees(celsiusDegrees) {
-        var difference = 273;
-
-        return celsiusDegrees * 1.0 + difference;
+    function getKelvin(celsiusValue) {
+        return celsiusValue * 1.0 + 273.15;
     }
 
     convertButton.addEventListener("click", function () {
-        celsiusDegreesNumberInput.classList.remove("invalid");
+        celsiusValueInput.classList.remove("invalid");
 
-        if (celsiusDegreesNumberInput.value === "") {
-            celsiusDegreesNumberInput.classList.add("invalid");
+        var celsiusValue = celsiusValueInput.value.trim().replaceAll(',', '.');
+
+        if (celsiusValue === "") {
+            celsiusValueInput.classList.add("invalid");
+            errorMessageText.textContent = "Field is required";
 
             return;
         }
 
-        var celsiusDegrees = celsiusDegreesNumberInput.value;
+        if (Number.isNaN(celsiusValue * 1)) {
+            celsiusValueInput.classList.add("invalid");
+            errorMessageText.textContent = "Incorrect value";
 
-        fahrenheitDegreesText.textContent = getFahrenheitDegrees(celsiusDegrees).toFixed(10);
-        kelvinDegreesText.textContent = getKelvinDegrees(celsiusDegrees).toFixed(10);
+            return;
+        }
+
+        fahrenheitValueText.textContent = getFahrenheitDegrees(celsiusValue).toFixed(10);
+        kelvinValueText.textContent = getKelvin(celsiusValue).toFixed(10);
     });
 
-    celsiusDegreesNumberInput.addEventListener("keyup", function () {
-        if (celsiusDegreesNumberInput.value !== celsiusDegreesValue) {
-            celsiusDegreesValue = celsiusDegreesNumberInput.value;
+    celsiusValueInput.addEventListener("keyup", function () {
+        if (celsiusValueInput.value !== celsiusValue) {
+            celsiusValue = celsiusValueInput.value;
 
-            fahrenheitDegreesText.textContent = "";
-            kelvinDegreesText.textContent = "";
+            fahrenheitValueText.textContent = "";
+            kelvinValueText.textContent = "";
         }
     });
 });

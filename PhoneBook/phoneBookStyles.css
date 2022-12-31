@@ -3,58 +3,74 @@
 }
 
 .phonebook-block {
-    width: 500px;
+    width: 70%;
     background-color: #cecece;
-    padding: 5px 15px;
+    padding: 5px 15px 15px;
     font-family: Arial, sans-serif;
     color: #4b4a4a;
     margin: auto;
 }
 
-.fields-block > * {
-    display: inline-block;
-    vertical-align: top;
+.phonebook-block,
+.phonebook-block form,
+.header,
+.new-contact,
+.new-field,
+.add-button {
+    display: flex;
 }
 
-.phonebook-block h1 {
-    width: 150px;
-    margin: 0 auto 8px;
-    size: 25px;
+.phonebook-block,
+.phonebook-block form {
+    flex-direction: column;
+}
+
+.header,
+.new-contact {
+    justify-content: center;
+}
+
+.contacts-table {
+}
+
+.add-button {
+    justify-content: right;
+}
+
+.header h1 {
+    font-size: 25px;
     color: #205067;
 }
 
 .phonebook-block form {
-    margin: auto;
-    width: 355px;
+    width: 400px;
+}
+
+.new-field,
+.new-field div,
+.phonebook-block input {
+    width: 100%;
 }
 
 .phonebook-block label {
+    min-width: 150px;
     padding-top: 3px;
-    width: 150px;
+    margin-bottom: 20px;
 }
 
-.phonebook-block input {
-    width: 200px;
-}
-
-.fields-block div {
-    height: 40px;
-}
-
-.phonebook-block button {
+.add-button button {
     color: #fdfeff;
     background-color: #3b98de;
     padding: 2px 25px;
-    margin-right: 1px;
+    margin-bottom: 10px;
 }
 
-.add-button {
-    display: flex;
-    justify-content: right;
-}
-
-.phonebook-block button:hover {
+.add-button button:hover,
+.delete-button {
     cursor: pointer;
+}
+
+.add-button button:hover {
     background-color: #205067;
 }
 
@@ -78,4 +94,50 @@
 
 .todo-item + .todo-item {
     margin-top: 5px;
+}
+
+.phonebook-block table {
+    font-family: "St.Sign Normal", sans-serif;
+    font-size: 15px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.contacts-table th,
+.contacts-table td {
+    border: 1px solid #cecece;
+    padding: 8px 8px 8px 8px;
+}
+
+.contacts-table th {
+    color: #fdfeff;
+    background-color: #3b98de;
+    text-align: left;
+}
+
+.contacts-table td,
+.delete-button {
+    color: #4b4a4a;
+    background-color: #fdfeff;
+}
+
+.first-name,
+.last-name {
+    width: 200px;
+}
+
+.telephone-number {
+    width: 180px;
+}
+
+.record-number {
+    width: 80px;
+}
+
+.delete {
+    width: 50px;
+}
+
+.delete-button {
+    border: none;
 }

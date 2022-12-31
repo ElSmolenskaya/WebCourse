@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/phoneBook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/jquery-3.6.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/jquery-3.6.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookJQuery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookStylesJQuery.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="246295000" />
+      <workItem from="1669383275744" duration="246658000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -279,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672241296594</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Разработка модуля PhoneBook">
+      <created>1672485622762</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1672485622762</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +326,7 @@
     <MESSAGE value="Создание модуля Phonebook" />
     <MESSAGE value="Исправлены ошибки в модулях TodoList и TodoListJQuery" />
     <MESSAGE value="Исправлены ошибки в модуле TemperatureConverter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле TemperatureConverter" />
+    <MESSAGE value="Разработка модуля PhoneBook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Разработка модуля PhoneBook" />
   </component>
 </project>

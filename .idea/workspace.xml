@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/PhoneBook/jquery-3.6.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/jquery-3.6.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookJQuery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBook/phoneBookStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookStylesJQuery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Underscore/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Underscore/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Underscore/underscore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Underscore/underscore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -47,12 +47,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/PhoneBook",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/Underscore",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -60,11 +61,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Underscore" />
       <recent name="$PROJECT_DIR$/PhoneBook" />
       <recent name="$PROJECT_DIR$/TodoListJQuery" />
       <recent name="$PROJECT_DIR$/TemperatureConverter" />
       <recent name="$PROJECT_DIR$/TodoList" />
-      <recent name="$PROJECT_DIR$/Gabriel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TodoListJQuery" />
@@ -82,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="246658000" />
+      <workItem from="1669383275744" duration="264702000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -287,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672485622762</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Разработка модуля PhoneBook">
+      <created>1672485891164</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1672485891164</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -11,6 +11,12 @@
     margin: auto;
 }
 
+@media screen and (max-width: 960px) {
+    .phonebook-block {
+        width: 100%;
+    }
+}
+
 .phonebook-block,
 .phonebook-block form,
 .header,
@@ -112,13 +118,18 @@
 .contacts-table th {
     color: #fdfeff;
     background-color: #3b98de;
-    text-align: left;
 }
 
 .contacts-table td,
 .delete-button {
     color: #4b4a4a;
     background-color: #fdfeff;
+}
+
+.first-name,
+.last-name,
+.telephone-number {
+    text-align: left;
 }
 
 .first-name,
@@ -130,7 +141,12 @@
     width: 180px;
 }
 
-.record-number {
+.contact-number,
+.delete {
+    text-align: center;
+}
+
+.contact-number {
     width: 80px;
 }
 

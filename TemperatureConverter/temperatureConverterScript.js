@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     convertButton.addEventListener("click", function () {
         celsiusValueInput.classList.remove("invalid");
 
-        var celsiusValue = celsiusValueInput.value.trim().replaceAll(',', '.');
+        var celsiusValue = celsiusValueInput.value.trim().replaceAll(",", ".");
 
         if (celsiusValue === "") {
             celsiusValueInput.classList.add("invalid");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (Number.isNaN(celsiusValue * 1)) {
+        if (Number.isNaN(+celsiusValue)) {
             celsiusValueInput.classList.add("invalid");
             errorMessageText.textContent = "Incorrect value";
 

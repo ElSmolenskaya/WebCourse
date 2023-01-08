@@ -9,30 +9,30 @@
     <script defer src="phoneBookScriptJQuery.js"></script>
 </head>
 <body>
-<div class="phonebook-block">
+<div class="phonebook-container">
     <div class="header">
         <h1>Phonebook</h1>
     </div>
-    <div class="new-contact">
+    <div class="new-contact-form">
         <form id="form">
-            <div class="new-field">
-                <label for="new-first-name">Firstname:</label>
+            <div class="field">
+                <label for="new-first-name">First name:</label>
                 <div>
                     <input id="new-first-name" type="text">
                     <div class="error-message">Field is required</div>
                 </div>
             </div>
-            <div class="new-field">
-                <label for="new-last-name">Lastname:</label>
+            <div class="field">
+                <label for="new-last-name">Last name:</label>
                 <div>
                     <input id="new-last-name" type="text">
                     <div class="error-message">Field is required</div>
                 </div>
             </div>
-            <div class="new-field">
-                <label for="new-telephone-number">Telephone number:</label>
+            <div class="field">
+                <label for="new-phone-number">Phone number:</label>
                 <div>
-                    <input id="new-telephone-number" type="text">
+                    <input id="new-phone-number" type="text">
                     <div class="error-message">Field is required</div>
                 </div>
             </div>
@@ -45,10 +45,10 @@
         <thead>
         <tr>
             <th class="contact-number">№</th>
-            <th class="last-name">Фамилия</th>
-            <th class="first-name">Имя</th>
-            <th class="telephone-number">Номер телефона</th>
-            <th class="delete"></th>
+            <th class="last-name">Last name</th>
+            <th class="first-name">First name</th>
+            <th class="phone-number">Phone number</th>
+            <th class="delete-column"></th>
         </tr>
         </thead>
         <tbody id="contacts-table-body"></tbody>

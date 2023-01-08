@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.phonebook-block {
+.phonebook-container {
     width: 70%;
     background-color: #cecece;
     padding: 5px 15px 15px;
@@ -12,31 +12,28 @@
 }
 
 @media screen and (max-width: 960px) {
-    .phonebook-block {
+    .phonebook-container {
         width: 100%;
     }
 }
 
-.phonebook-block,
-.phonebook-block form,
+.phonebook-container,
+.phonebook-container form,
 .header,
-.new-contact,
-.new-field,
+.new-contact-form,
+.field,
 .add-button {
     display: flex;
 }
 
-.phonebook-block,
-.phonebook-block form {
+.phonebook-container,
+.phonebook-container form {
     flex-direction: column;
 }
 
 .header,
-.new-contact {
+.new-contact-form {
     justify-content: center;
-}
-
-.contacts-table {
 }
 
 .add-button {
@@ -48,17 +45,17 @@
     color: #205067;
 }
 
-.phonebook-block form {
+.phonebook-container form {
     width: 400px;
 }
 
-.new-field,
-.new-field div,
-.phonebook-block input {
+.field,
+.field div,
+.phonebook-container input {
     width: 100%;
 }
 
-.phonebook-block label {
+.phonebook-container label {
     min-width: 150px;
     padding-top: 3px;
     margin-bottom: 20px;
@@ -102,7 +99,7 @@
     margin-top: 5px;
 }
 
-.phonebook-block table {
+.phonebook-container table {
     font-family: "St.Sign Normal", sans-serif;
     font-size: 15px;
     border-collapse: collapse;
@@ -112,7 +109,7 @@
 .contacts-table th,
 .contacts-table td {
     border: 1px solid #cecece;
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
 }
 
 .contacts-table th {
@@ -120,15 +117,14 @@
     background-color: #3b98de;
 }
 
-.contacts-table td,
-.delete-button {
+.contacts-table td {
     color: #4b4a4a;
     background-color: #fdfeff;
 }
 
 .first-name,
 .last-name,
-.telephone-number {
+.phone-number {
     text-align: left;
 }
 
@@ -137,12 +133,12 @@
     width: 200px;
 }
 
-.telephone-number {
+.phone-number {
     width: 180px;
 }
 
 .contact-number,
-.delete {
+.delete-column {
     text-align: center;
 }
 
@@ -150,10 +146,11 @@
     width: 80px;
 }
 
-.delete {
+.delete-column {
     width: 50px;
 }
 
 .delete-button {
+    background-color: transparent;
     border: none;
 }

@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Bootstrap/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookJQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookJQuery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookStylesJQuery.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookStylesJQuery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/TemperatureConverter/temperatureConverterScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoList/todoListStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoList/todoListStyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListJQuery/todoListJQueryStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Underscore/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Underscore/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/Underscore",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/Bootstrap",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -63,11 +67,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Bootstrap" />
       <recent name="$PROJECT_DIR$/Underscore" />
       <recent name="$PROJECT_DIR$/PhoneBook" />
       <recent name="$PROJECT_DIR$/TodoListJQuery" />
       <recent name="$PROJECT_DIR$/TemperatureConverter" />
-      <recent name="$PROJECT_DIR$/TodoList" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TodoListJQuery" />
@@ -85,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="267333000" />
+      <workItem from="1669383275744" duration="305493000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -304,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672755487164</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Исправлены недочеты в модулях TodoList, TodoListJQuery">
+      <created>1672833968791</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1672833968791</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +356,7 @@
     <MESSAGE value="Исправлены ошибки в модуле TemperatureConverter" />
     <MESSAGE value="Разработка модуля PhoneBook" />
     <MESSAGE value="Разработка модуля Underscore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Разработка модуля Underscore" />
+    <MESSAGE value="Исправлены недочеты в модулях TodoList, TodoListJQuery" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены недочеты в модулях TodoList, TodoListJQuery" />
   </component>
 </project>

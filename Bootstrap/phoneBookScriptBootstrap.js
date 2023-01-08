@@ -19,9 +19,9 @@ $(function () {
     function addContact(contact, contactNumber) {
         var contactItem = $("<tr>");
 
-        contactItem.html("<td class='contact-number'>" + contactNumber + "</td><td>" +
-            contact.lastName + "</td><td>" + contact.firstName + "</td><td class='phone-number'>" + contact.phoneNumber +
-            "</td><td class='delete-column'><button class='delete-button' type='button'>x</button></td>");
+        contactItem.html("<th scope='row' class='contact-number'>" + contactNumber + "</th><td>" + contact.lastName +
+            "</td><td>" + contact.firstName + "</td><td class='phone-number'>" + contact.phoneNumber +
+            "</td><td><button class='delete-button' type='button'>x</button></td>");
 
         var deleteButton = contactItem.find(".delete-button");
 

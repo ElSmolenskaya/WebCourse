@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List Vue</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="todoListVue.css">
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script defer src="node_modules/vue/dist/vue.js"></script>
+    <script defer src="todoListVue.js"></script>
+</head>
+<body>
+<div id="app" class="todo-list-container container flex-row justify-content-center">
+    <h1 class="container d-flex justify-content-center pt-2">Todo List</h1>
+    <div class="container d-flex justify-content-center">
+        <form @submit.prevent class="needs-validation" novalidate>
+            <div class="input-group mb-1">
+                <span class="input-group-text">Enter text:</span>
+                <input :class="{invalid: isNewItemInvalid}" v-model="newItemText" type="text" class="form-control">
+                <div class="btn-group" role="group">
+                    <button @click="addItem" class="btn btn-outline-secondary" type="submit">Add</button>
+                </div>
+                <div class="invalid-feedback">Field is required</div>
+            </div>
+        </form>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <ul>
+            <li v-for="(item, index) in items" :key="item.id">
+                <template v-if="!item.isEditing">
+                    <div class="todo-item d-flex">
+                        <div class="todo-item-text p-1 flex-grow-1">
+                            <span v-text="item.text"></span>
+                        </div>
+                        <div class="btn-group p-1" role="group">
+                            <button @click="editItem(item)" class="btn btn-outline-secondary" type="button">
+                                Edit
+                            </button>
+                            <button @click="deleteItem(index)" class="btn btn-outline-secondary" type="button">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </template>
+                <template v-else>
+                    <div class="d-flex">
+                        <div class="input-group input-group p-1">
+                            <input :class="{invalid: item.isInvalid}" v-model="item.editText" type="text"
+                                   class="form-control">
+                            <div class="btn-group" role="group">
+                                <button @click="saveItem(item)" class="btn btn-outline-secondary" type="button">
+                                    Save
+                                </button>
+                                <button @click="cancelEditing(item)" class="btn btn-outline-secondary" type="button">
+                                    Cancel
+                                </button>
+                            </div>
+                            <div class="invalid-feedback">Field is required</div>
+                        </div>
+                    </div>
+                </template>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

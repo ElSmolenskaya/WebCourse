@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Bootstrap/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoListVue/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoListVue/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookJQuery.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookJQuery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookStylesJQuery.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookStylesJQuery.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Underscore/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Underscore/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -89,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="305493000" />
+      <workItem from="1669383275744" duration="334296000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -315,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672833968791</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Исправлены недочеты в модуле phoneBookJQuery, разработан модуль Bootstrap">
+      <created>1673191651105</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673191651105</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,6 +359,7 @@
     <MESSAGE value="Разработка модуля PhoneBook" />
     <MESSAGE value="Разработка модуля Underscore" />
     <MESSAGE value="Исправлены недочеты в модулях TodoList, TodoListJQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены недочеты в модулях TodoList, TodoListJQuery" />
+    <MESSAGE value="Исправлены недочеты в модуле phoneBookJQuery, разработан модуль Bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены недочеты в модуле phoneBookJQuery, разработан модуль Bootstrap" />
   </component>
 </project>

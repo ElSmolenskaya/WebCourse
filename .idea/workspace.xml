@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TodoListVue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListVue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookJQuery/phoneBookScriptJQuery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668348167385</updated>
       <workItem from="1668679652044" duration="65493000" />
-      <workItem from="1669383275744" duration="334296000" />
+      <workItem from="1669383275744" duration="345986000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -317,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673191651105</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Разработка модуля TodoListVue">
+      <created>1673369000580</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1673369000580</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +369,7 @@
     <MESSAGE value="Разработка модуля Underscore" />
     <MESSAGE value="Исправлены недочеты в модулях TodoList, TodoListJQuery" />
     <MESSAGE value="Исправлены недочеты в модуле phoneBookJQuery, разработан модуль Bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены недочеты в модуле phoneBookJQuery, разработан модуль Bootstrap" />
+    <MESSAGE value="Разработка модуля TodoListVue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Разработка модуля TodoListVue" />
   </component>
 </project>

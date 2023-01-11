@@ -12,16 +12,18 @@ $(function () {
         e.preventDefault();
     });
 
-    function deleteTags(string) {
-        return string.replace(/<\/?[a-zA-Z]+>/gi, "");
-    }
-
     function addContact(contact, contactNumber) {
         var contactItem = $("<tr>");
 
-        contactItem.html("<th scope='row' class='contact-number'>" + contactNumber + "</th><td>" + contact.lastName +
-            "</td><td>" + contact.firstName + "</td><td class='phone-number'>" + contact.phoneNumber +
-            "</td><td><button class='delete-button' type='button'>x</button></td>");
+        contactItem.html("<th scope='row' class='contact-number'></th><td class='last-name'></td>\
+            <td class='first-name'></td><td class='phone-number'></td><td class='delete-column'>\
+            <button class='delete-button' type='button'>x</button></td>"
+        );
+
+        contactItem.find(".contact-number").text(contactNumber);
+        contactItem.find(".last-name").text(contact.lastName);
+        contactItem.find(".first-name").text(contact.firstName);
+        contactItem.find(".phone-number").text(contact.phoneNumber);
 
         var deleteButton = contactItem.find(".delete-button");
 
@@ -41,13 +43,13 @@ $(function () {
     }
 
     addButton.click(function () {
-        var newFirstNameText = deleteTags(newFirstNameInput.val().trim());
+        var newFirstNameText = newFirstNameInput.val().trim();
         newFirstNameInput.removeClass("invalid");
 
-        var newLastNameText = deleteTags(newLastNameInput.val().trim());
+        var newLastNameText = newLastNameInput.val().trim();
         newLastNameInput.removeClass("invalid");
 
-        var newPhoneNumberText = deleteTags(newPhoneNumberInput.val().trim());
+        var newPhoneNumberText = newPhoneNumberInput.val().trim();
         newPhoneNumberInput.removeClass("invalid");
 
         var isInvalid = false;

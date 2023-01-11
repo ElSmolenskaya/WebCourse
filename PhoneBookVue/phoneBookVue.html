@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PhoneBook</title>
+    <title>PhoneBook Vue</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="phoneBookStylesBootstrap.css">
-    <script defer src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="phoneBookVue.css">
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script defer src="phoneBookScriptBootstrap.js"></script>
+    <script defer src="node_modules/vue/dist/vue.js"></script>
+    <script defer src="phoneBookVue.js"></script>
 </head>
 <body>
-<div class="phonebook-container container flex-row justify-content-center p-3">
+<div id="app" class="phonebook-container container flex-row justify-content-center p-3">
     <h1 class="container d-flex justify-content-center">Phonebook</h1>
     <div class="container d-flex justify-content-center">
-        <form id="form" class="needs-validation" novalidate>
+        <form @submit.prevent id="form" class="needs-validation" novalidate>
             <div class="input-group mb-1">
                 <span class="input-group-text">First name</span>
-                <input id="new-first-name" type="text" class="form-control">
+                <input :class="{invalid: isNewFirstNameInvalid}" v-model="newFirstNameText" type="text"
+                       class="form-control">
                 <div class="invalid-feedback">Field is required</div>
             </div>
             <div class="input-group mb-1">
                 <span class="input-group-text">Last name</span>
-                <input id="new-last-name" type="text" class="form-control">
+                <input :class="{invalid: isNewLastNameInvalid}" v-model="newLastNameText" type="text"
+                       class="form-control">
                 <div class="invalid-feedback">Field is required</div>
             </div>
             <div class="input-group mb-1">
                 <span class="input-group-text">Phone number</span>
-                <input id="new-phone-number" type="text" class="form-control">
+                <input :class="{invalid: isNewPhoneNumberInvalid}" v-model="newPhoneNumberText" type="text"
+                       class="form-control">
                 <div class="invalid-feedback">Field is required</div>
             </div>
             <div class="add-button container d-flex justify-content-end p-0">
-                <button id="add-button" class="btn btn-primary mb-3" type="submit">Add</button>
+                <button @click="addContact" class="btn btn-primary mb-3" type="submit">Add</button>
             </div>
         </form>
     </div>
@@ -45,7 +48,17 @@
             <th class="delete-contact-column" scope="col"></th>
         </tr>
         </thead>
-        <tbody id="contacts-table-body"></tbody>
+        <tbody>
+        <tr v-for="(contact, index) in contacts" :key="contact.id">
+            <td v-text="index+1"></td>
+            <td v-text="contact.lastName"></td>
+            <td v-text="contact.firstName"></td>
+            <td v-text="contact.phoneNumber"></td>
+            <td>
+                <button @click="deleteContact(index)" class='delete-button' type='button'>x</button>
+            </td>
+        </tr>
+        </tbody>
     </table>
 </div>
 </body>

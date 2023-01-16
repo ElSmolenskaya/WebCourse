@@ -1,10 +1,10 @@
 (function () {
     function getAverageAge(people) {
         return _.chain(people)
-            .pluck("age")
-            .reduce(function (agesSumma, age) {
-                return agesSumma + age;
-            }, 0).value() / _.size(people);
+            .reduce(function (agesSum, people) {
+                return agesSum + people.age;
+            }, 0)
+            .value() / _.size(people);
     }
 
     function getFrom20To30AgedPeople(people) {
@@ -28,11 +28,10 @@
             .value();
     }
 
-    function getNamesCount(people) {
+    function getNamesCounts(people) {
         return _.chain(people)
-            .pluck("name")
-            .countBy(function (name) {
-                return name;
+            .countBy(function (people) {
+                return people.name;
             })
             .value();
     }
@@ -72,11 +71,11 @@
         console.log(name);
     });
 
-    var namesCount = getNamesCount(people);
+    var namesCounts = getNamesCounts(people);
 
     console.log("An object where key is name and value is names count:");
 
-    for (var name in namesCount) {
-        console.log(name + " - " + namesCount[name]);
+    for (var name in namesCounts) {
+        console.log(name + " - " + namesCounts[name]);
     }
 })();

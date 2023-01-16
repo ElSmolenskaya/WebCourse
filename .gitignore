@@ -2,3 +2,5 @@
 /Bootstrap/node_modules/
 /TodoListVue/node_modules/
 /PhoneBookVue/node_modules/
+/PhoneBookVueServer/node_modules/
+/PhoneBookVueServer/public/node_modules/

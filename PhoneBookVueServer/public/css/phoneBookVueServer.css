@@ -1,0 +1,52 @@
+[v-cloak]{
+    display: none;
+}
+
+.phonebook-container {
+    width: 70%;
+    background-color: #afb1b3;
+    font-family: Arial, sans-serif;
+    color: #4b4a4a;
+}
+
+@media screen and (max-width: 960px) {
+    .phonebook-container {
+        width: 100%;
+    }
+}
+
+.phonebook-container h1 {
+    color: #f8fcfe;
+}
+
+.phonebook-container form {
+    width: 400px;
+}
+
+.add-button button {
+    color: #fdfeff;
+    background-color: #3b98de;
+}
+
+.invalid-feedback {
+    display: block;
+    opacity: 0;
+}
+
+.invalid {
+    border-color: #f00;
+}
+
+.invalid ~ .invalid-feedback {
+    display: block;
+    opacity: 1;
+}
+
+.delete-button {
+    border: none;
+    background-color: transparent;
+}
+
+.delete-contact-column {
+    width: 40px;
+}

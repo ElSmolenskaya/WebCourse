@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PhoneBookVue/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVue/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/bin/www" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/stylesheets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/routes/users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/error.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/layout.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/css/phoneBookVueServer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/views/layout.twig" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/layout.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Underscore/underscore.js" beforeDir="false" afterPath="$PROJECT_DIR$/Underscore/underscore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -95,7 +92,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="3109000" />
+      <workItem from="1673514027070" duration="18099000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -342,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673441415537</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Разработка модуля PhoneBookVueServer, добавлены папки в gitignore">
+      <created>1673520471256</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1673520471256</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +365,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Создание CSS Text проекта" />
     <MESSAGE value="Переименование CssText проекта" />
     <MESSAGE value="Создание проекта CssTable" />
     <MESSAGE value="Создание модуля CssForm" />
@@ -386,7 +389,8 @@
     <MESSAGE value="Исправлены недочеты в модуле phoneBookJQuery, разработан модуль Bootstrap" />
     <MESSAGE value="Разработка модуля TodoListVue" />
     <MESSAGE value="Разработка модуля PhoneBookVue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Разработка модуля PhoneBookVue" />
+    <MESSAGE value="Разработка модуля PhoneBookVueServer, добавлены папки в gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Разработка модуля PhoneBookVueServer, добавлены папки в gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

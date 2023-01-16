@@ -19,7 +19,7 @@
 
 .phonebook-container,
 .phonebook-container form,
-.header,
+.phonebook-container h1,
 .new-contact-form,
 .field,
 .add-button {
@@ -31,7 +31,7 @@
     flex-direction: column;
 }
 
-.header,
+.phonebook-container h1,
 .new-contact-form {
     justify-content: center;
 }
@@ -40,7 +40,7 @@
     justify-content: right;
 }
 
-.header h1 {
+.phonebook-container h1 {
     font-size: 25px;
     color: #205067;
 }

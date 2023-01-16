@@ -28,7 +28,7 @@ $(function () {
         var deleteButton = contactItem.find(".delete-button");
 
         deleteButton.click(function () {
-            contactItem.html("");
+            contactItem.remove();
 
             var contactsNumbers = contactsTable.find(".contact-number");
 

@@ -3,13 +3,29 @@ $(function () {
     var newFirstNameInput = $("#new-first-name");
     var newLastNameInput = $("#new-last-name");
     var newPhoneNumberInput = $("#new-phone-number");
-
     var contactsTable = $("#contacts-table-body");
     var form = $("#form");
+    var deleteConfirmationModal = new bootstrap.Modal($("#deleteConfirmDialog"));
+    var deleteConfirmationButton = $("#delete-confirmation-button");
+
     var contactsCount = 0;
+    var deletingContactItem;
 
     form.submit(function (e) {
         e.preventDefault();
+    });
+
+    deleteConfirmationButton.click(function () {
+        deletingContactItem.remove();
+
+        var contactsNumbers = contactsTable.find(".contact-number");
+
+        contactsNumbers.each(function (i) {
+            $(this).text(i + 1);
+        });
+
+        contactsCount--;
+        console.log(contactsCount);
     });
 
     function addContact(contact, contactNumber) {
@@ -17,7 +33,7 @@ $(function () {
 
         contactItem.html("<th scope='row' class='contact-number'></th><td class='last-name'></td>\
             <td class='first-name'></td><td class='phone-number'></td><td class='delete-column'>\
-            <button class='delete-button' type='button'>x</button></td>"
+            <button type='button' class='delete-button btn btn-danger' title='Delete contact'>x</button></td>"
         );
 
         contactItem.find(".contact-number").text(contactNumber);
@@ -28,15 +44,9 @@ $(function () {
         var deleteButton = contactItem.find(".delete-button");
 
         deleteButton.click(function () {
-            contactItem.html("");
+            deletingContactItem = contactItem;
 
-            var contactsNumbers = contactsTable.find(".contact-number");
-
-            contactsNumbers.each(function (i) {
-                $(this).text(i + 1);
-            });
-
-            contactsCount--;
+            deleteConfirmationModal.show();
         });
 
         contactsTable.append(contactItem);

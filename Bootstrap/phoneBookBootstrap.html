@@ -12,8 +12,8 @@
 </head>
 <body>
 <div class="phonebook-container container flex-row justify-content-center p-3">
-    <h1 class="container d-flex justify-content-center">Phonebook</h1>
-    <div class="container d-flex justify-content-center">
+    <h1 class="d-flex justify-content-center">Phonebook</h1>
+    <div class="d-flex justify-content-center">
         <form id="form" class="needs-validation" novalidate>
             <div class="input-group mb-1">
                 <span class="input-group-text">First name</span>
@@ -35,18 +35,39 @@
             </div>
         </form>
     </div>
-    <table class="table table-success table-striped table-bordered table-hover">
-        <thead>
-        <tr class="table-light">
-            <th scope="col">№</th>
-            <th scope="col">Last name</th>
-            <th scope="col">First name</th>
-            <th scope="col">Phone number</th>
-            <th class="delete-contact-column" scope="col"></th>
-        </tr>
-        </thead>
-        <tbody id="contacts-table-body"></tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-success table-striped table-bordered table-hover">
+            <thead>
+            <tr class="table-light">
+                <th scope="col">№</th>
+                <th scope="col">Last name</th>
+                <th scope="col">First name</th>
+                <th scope="col">Phone number</th>
+                <th class="delete-contact-column" scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id="contacts-table-body"></tbody>
+        </table>
+    </div>
+    <div id="deleteConfirmDialog" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Deletion confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you really want to delete the contact?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button id="delete-confirmation-button" data-bs-dismiss="modal" type="button"
+                            class="btn btn-primary">OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

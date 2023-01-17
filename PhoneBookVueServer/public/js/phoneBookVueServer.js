@@ -36,6 +36,7 @@ new Vue({
         lastName: "",
         phoneNumber: "",
         term: "",
+        contactToDelete: null,
         service: new PhoneBookService()
     },
 
@@ -79,10 +80,17 @@ new Vue({
             });
         },
 
-        deleteContact: function (contact) {
+        showDeleteContactConfirmation: function (contact) {
+            this.contactToDelete = contact;
+
+            var deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);
+            deleteConfirmationModal.show();
+        },
+
+        deleteContact: function () {
             var self = this;
 
-            this.service.deleteContact(contact.id).done(function (response) {
+            this.service.deleteContact(this.contactToDelete.id).done(function (response) {
                 if (!response.success) {
                     alert(response.message);
                     return;

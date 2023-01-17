@@ -9,6 +9,7 @@ new Vue({
         isNewLastNameInvalid: false,
         newPhoneNumberText: "",
         isNewPhoneNumberInvalid: false,
+        contactToDeleteIndex: -1,
         contactId: 1
     },
 
@@ -56,8 +57,15 @@ new Vue({
             this.newPhoneNumberText = "";
         },
 
-        deleteContact: function (contactIndex) {
-            this.contacts.splice(contactIndex, 1);
+        showDeleteContactConfirmation: function (contactToDeleteIndex) {
+            this.contactToDeleteIndex = contactToDeleteIndex;
+
+            var deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);
+            deleteConfirmationModal.show();
         },
+
+        deleteContact: function () {
+            this.contacts.splice(this.contactToDeleteIndex, 1);
+        }
     }
 });

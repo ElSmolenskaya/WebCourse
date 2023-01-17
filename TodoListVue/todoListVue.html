@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Todo List Vue</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="todoListVue.css">
+    <link href="todoListVue.css" rel="stylesheet">
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="node_modules/vue/dist/vue.js"></script>
     <script defer src="todoListVue.js"></script>
@@ -46,7 +46,8 @@
                 <template v-else>
                     <div class="d-flex">
                         <div class="input-group input-group p-1">
-                            <input :class="{invalid: item.isInvalid}" v-model="item.editText" type="text"
+                            <input @keyup.enter="saveItem(item)" :class="{invalid: item.isInvalid}"
+                                   v-model="item.editText" type="text"
                                    class="form-control">
                             <div class="btn-group" role="group">
                                 <button @click="saveItem(item)" class="btn btn-outline-secondary" type="button">

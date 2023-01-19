@@ -17,7 +17,7 @@ $(function () {
 
         contactItem.html("<td class='contact-number'></td><td class='last-name'></td>\
             <td class='first-name'></td><td class='phone-number'></td><td class='delete-column'>\
-            <button class='delete-button' type='button'>x</button></td>"
+            <button class='delete-button' type='button' title='Delete contact'>x</button></td>"
         );
 
         contactItem.find(".contact-number").text(contactNumber);

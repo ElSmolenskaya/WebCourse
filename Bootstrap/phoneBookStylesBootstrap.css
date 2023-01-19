@@ -19,6 +19,10 @@
     width: 400px;
 }
 
+.phonebook-container .input-group-text {
+    width: 130px;
+}
+
 .add-button button {
     color: #fdfeff;
     background-color: #3b98de;

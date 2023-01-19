@@ -1,4 +1,4 @@
-[v-cloak]{
+[v-cloak] {
     display: none;
 }
 
@@ -23,9 +23,11 @@
     width: 400px;
 }
 
-.add-button button {
+.add-button button,
+.search-button {
     color: #fdfeff;
     background-color: #3b98de;
+    width: 80px
 }
 
 .invalid-feedback {
@@ -43,10 +45,10 @@
 }
 
 .delete-button {
-    border: none;
-    background-color: transparent;
+    padding: 0 8px;
 }
 
+.check-contact-column,
 .delete-contact-column {
     width: 40px;
 }

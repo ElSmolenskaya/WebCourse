@@ -11,17 +11,27 @@
 }
 
 .todo-list-container form {
-    width: 90%;
+    height: 40px;
 }
 
+.todo-list-container form,
 .todo-list-container ul {
     width: 90%;
+
 }
 
 .todo-list-container ul button {
     width: 80px;
     border-width: 2px;
     border-style: solid;
+}
+
+.todo-list-container ul .input-group {
+    height: 45px;
+}
+
+.todo-item {
+    margin-bottom: 15px;
 }
 
 .todo-list-container ul input,
@@ -37,26 +47,4 @@
 .todo-list-container .input-group-text {
     color: #fdfeff;
     background-color: #928782;
-}
-
-.todo-item {
-    margin-bottom: 25px;
-}
-
-.todo-item-text {
-    margin-top: 3px;
-}
-
-.invalid-feedback {
-    display: block;
-    opacity: 0;
-}
-
-.invalid {
-    border-color: #f00;
-}
-
-.invalid ~ .invalid-feedback {
-    display: block;
-    opacity: 1;
 }

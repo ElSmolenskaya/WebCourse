@@ -12,12 +12,12 @@
 </head>
 <body>
 <div id="app" class="todo-list-container container flex-row justify-content-center">
-    <h1 class="container d-flex justify-content-center pt-2">Todo List</h1>
-    <div class="container d-flex justify-content-center">
-        <form @submit.prevent class="needs-validation" novalidate>
-            <div class="input-group mb-1">
+    <h1 class="d-flex justify-content-center pt-2">Todo List</h1>
+    <div class="d-flex justify-content-center">
+        <form @submit.prevent class="needs-validation mb-4" novalidate>
+            <div class="input-group">
                 <span class="input-group-text">Enter text:</span>
-                <input :class="{invalid: isNewItemInvalid}" v-model="newItemText" type="text" class="form-control">
+                <input :class="{'is-invalid': isNewItemInvalid}" v-model="newItemText" type="text" class="form-control">
                 <div class="btn-group" role="group">
                     <button @click="addItem" class="btn btn-outline-secondary" type="submit">Add</button>
                 </div>
@@ -25,15 +25,15 @@
             </div>
         </form>
     </div>
-    <div class="container d-flex justify-content-center">
-        <ul>
-            <li v-for="(item, index) in items" :key="item.id">
+    <div class="d-flex justify-content-center">
+        <ul class="list-group mb-3">
+            <li v-for="(item, index) in items" :key="item.id" class="list-group-item bg-transparent border-0 ps-0 pe-0">
                 <template v-if="!item.isEditing">
                     <div class="todo-item d-flex">
-                        <div class="todo-item-text p-1 flex-grow-1">
+                        <div class="todo-item-text flex-grow-1">
                             <span v-text="item.text"></span>
                         </div>
-                        <div class="btn-group p-1" role="group">
+                        <div class="btn-group" role="group">
                             <button @click="editItem(item)" class="btn btn-outline-secondary" type="button">
                                 Edit
                             </button>
@@ -45,8 +45,9 @@
                 </template>
                 <template v-else>
                     <div class="d-flex">
-                        <div class="input-group input-group p-1">
-                            <input @keyup.enter="saveItem(item)" :class="{invalid: item.isInvalid}"
+                        <div class="input-group">
+                            <input @keyup.enter="saveItem(item)"
+                                   :class="{'is-invalid': item.isInvalid}"
                                    v-model="item.editText" type="text"
                                    class="form-control">
                             <div class="btn-group" role="group">

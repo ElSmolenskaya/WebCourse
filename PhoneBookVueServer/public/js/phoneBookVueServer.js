@@ -1,3 +1,20 @@
+Vue.component("base-checkbox", {
+    model: {
+        prop: "checked",
+        event: "change"
+    },
+    props: {
+        checked: Boolean
+    },
+    template: `
+    <input
+      type="checkbox"
+      class="form-check-input"
+      v-bind:checked="checked"
+      v-on:change="$emit('change', $event.target.checked)"
+    >  `
+});
+
 function get(url, data) {
     return $.get(url, data)
 }
@@ -33,15 +50,23 @@ new Vue({
     data: {
         contacts: [],
         firstName: "",
+        isFirstNameInvalid: false,
         lastName: "",
+        isLastNameInvalid: false,
         phoneNumber: "",
+        isPhoneNumberInvalid: false,
         term: "",
         contactToDelete: null,
+        isAllContactsChecked: false,
         service: new PhoneBookService()
     },
 
     created: function () {
         this.loadContacts();
+
+        this.contacts.forEach(function (contact) {
+            contact.checked = this.isAllContactsChecked;
+        });
     },
 
     methods: {
@@ -57,6 +82,19 @@ new Vue({
 
         createContact: function () {
             var self = this;
+
+            var newFirstName = this.firstName.trim();
+            this.isFirstNameInvalid = newFirstName.length === 0;
+
+            var newLastName = this.lastName.trim();
+            this.isLastNameInvalid = newLastName.length === 0;
+
+            var newPhoneNumber = this.phoneNumber.trim();
+            this.isPhoneNumberInvalid = newPhoneNumber.length === 0;
+
+            if (this.isFirstNameInvalid || this.isLastNameInvalid || this.isPhoneNumberInvalid) {
+                return;
+            }
 
             var request = {
                 firstName: this.firstName,
@@ -99,6 +137,15 @@ new Vue({
                 self.loadContacts();
             }).fail(function () {
                 alert("Contact wasn't deleted");
+            });
+        },
+
+        checkAllContacts: function () {
+            console.log("this.isAllContactsChecked=" + this.isAllContactsChecked);
+
+            this.contacts.forEach(function (contact) {
+                contact.checked = this.isAllContactsChecked;
+                console.log(contact.checked);
             });
         }
     }

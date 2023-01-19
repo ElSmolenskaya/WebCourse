@@ -82,27 +82,22 @@ $(function () {
             newPhoneNumberInput.addClass("is-invalid");
 
             isInvalid = true;
+        } else {
+            var phoneNumbers = contactsTable.find(".phone-number");
+
+            phoneNumbers.each(function () {
+                if ($(this).text() === newPhoneNumberText) {
+                    isInvalid = true;
+
+                    phoneNumberErrorText.text("Phone number is already exists");
+                    newPhoneNumberInput.addClass("is-invalid");
+
+                    return false;
+                }
+            });
         }
 
         if (isInvalid) {
-            return;
-        }
-
-        var phoneNumbers = contactsTable.find(".phone-number");
-        var isExists = false;
-
-        phoneNumbers.each(function () {
-            if ($(this).text() === newPhoneNumberText) {
-                isExists = true;
-
-                phoneNumberErrorText.text("Phone number is already exists");
-                newPhoneNumberInput.addClass("is-invalid");
-
-                return false;
-            }
-        });
-
-        if (isExists) {
             return;
         }
 

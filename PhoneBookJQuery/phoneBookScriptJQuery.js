@@ -3,6 +3,7 @@ $(function () {
     var newFirstNameInput = $("#new-first-name");
     var newLastNameInput = $("#new-last-name");
     var newPhoneNumberInput = $("#new-phone-number");
+    var phoneNumberErrorText = $("#phone-number-error-text");
 
     var contactsTable = $("#contacts-table-body");
     var form = $("#form");
@@ -67,29 +68,26 @@ $(function () {
         }
 
         if (newPhoneNumberText.length === 0) {
+            phoneNumberErrorText.text("Field is required");
             newPhoneNumberInput.addClass("invalid");
 
             isInvalid = true;
+        } else {
+            var phoneNumbers = contactsTable.find(".phone-number");
+
+            phoneNumbers.each(function () {
+                if ($(this).text() === newPhoneNumberText) {
+                    isInvalid = true;
+
+                    phoneNumberErrorText.text("Phone number is already exists");
+                    newPhoneNumberInput.addClass("invalid");
+
+                    return false;
+                }
+            });
         }
 
         if (isInvalid) {
-            return;
-        }
-
-        var phoneNumbers = contactsTable.find(".phone-number");
-        var isExists = false;
-
-        phoneNumbers.each(function () {
-            if ($(this).text() === newPhoneNumberText) {
-                isExists = true;
-
-                alert("Phone number " + newPhoneNumberText + " is already exists!");
-
-                return false;
-            }
-        });
-
-        if (isExists) {
             return;
         }
 

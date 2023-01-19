@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Underscore/underscore.js" beforeDir="false" afterPath="$PROJECT_DIR$/Underscore/underscore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="60562000" />
+      <workItem from="1673514027070" duration="62120000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -402,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674123800095</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Исправлены ошибки в модуле Bootstrap">
+      <created>1674125563108</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1674125563108</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,13 +445,13 @@
     <MESSAGE value="Разработка модуля PhoneBookVue" />
     <MESSAGE value="Разработка модуля PhoneBookVueServer, добавлены папки в gitignore" />
     <MESSAGE value="Исправлены ошибки в модуле Underscore" />
-    <MESSAGE value="Исправлены ошибки в модуле Bootstrap" />
     <MESSAGE value="Исправлены ошибки в модуле TodoList" />
     <MESSAGE value="Исправлены однотипные ошибки в модуле PhoneBookVue" />
     <MESSAGE value="Добавлено подтверждение удаления в модуле PhoneBookVue" />
     <MESSAGE value="Исправлены ошибки в модуле TodoListVue" />
     <MESSAGE value="Исправлены ошибки в модуле PhoneBookJQuery" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле PhoneBookJQuery" />
+    <MESSAGE value="Исправлены ошибки в модуле Bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле Bootstrap" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

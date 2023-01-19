@@ -1,8 +1,8 @@
 (function () {
     function getAverageAge(people) {
         return _.chain(people)
-            .reduce(function (agesSum, people) {
-                return agesSum + people.age;
+            .reduce(function (agesSum, person) {
+                return agesSum + person.age;
             }, 0)
             .value() / _.size(people);
     }
@@ -29,11 +29,7 @@
     }
 
     function getNamesCounts(people) {
-        return _.chain(people)
-            .countBy(function (people) {
-                return people.name;
-            })
-            .value();
+        return _.countBy(people, "name");
     }
 
     var people = [

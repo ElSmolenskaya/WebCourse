@@ -7,8 +7,8 @@
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoListVue/todoListVue.html" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="58847000" />
+      <workItem from="1673514027070" duration="60562000" />
     </task>
     <task id="LOCAL-00001" summary="Создание html-проекта">
       <created>1668679815711</created>
@@ -395,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674122516431</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Исправлены ошибки в модуле PhoneBookJQuery">
+      <created>1674123800095</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1674123800095</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

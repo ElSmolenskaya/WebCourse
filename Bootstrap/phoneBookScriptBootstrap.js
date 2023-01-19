@@ -3,6 +3,7 @@ $(function () {
     var newFirstNameInput = $("#new-first-name");
     var newLastNameInput = $("#new-last-name");
     var newPhoneNumberInput = $("#new-phone-number");
+    var phoneNumberErrorText = $("#phone-number-error-text");
     var contactsTable = $("#contacts-table-body");
     var form = $("#form");
     var deleteConfirmationModal = new bootstrap.Modal($("#deleteConfirmDialog"));
@@ -54,30 +55,31 @@ $(function () {
 
     addButton.click(function () {
         var newFirstNameText = newFirstNameInput.val().trim();
-        newFirstNameInput.removeClass("invalid");
+        newFirstNameInput.removeClass("is-invalid");
 
         var newLastNameText = newLastNameInput.val().trim();
-        newLastNameInput.removeClass("invalid");
+        newLastNameInput.removeClass("is-invalid");
 
         var newPhoneNumberText = newPhoneNumberInput.val().trim();
-        newPhoneNumberInput.removeClass("invalid");
+        newPhoneNumberInput.removeClass("is-invalid");
 
         var isInvalid = false;
 
         if (newFirstNameText.length === 0) {
-            newFirstNameInput.addClass("invalid");
+            newFirstNameInput.addClass("is-invalid");
 
             isInvalid = true;
         }
 
         if (newLastNameText.length === 0) {
-            newLastNameInput.addClass("invalid");
+            newLastNameInput.addClass("is-invalid");
 
             isInvalid = true;
         }
 
         if (newPhoneNumberText.length === 0) {
-            newPhoneNumberInput.addClass("invalid");
+            phoneNumberErrorText.text("Field is required");
+            newPhoneNumberInput.addClass("is-invalid");
 
             isInvalid = true;
         }
@@ -93,7 +95,8 @@ $(function () {
             if ($(this).text() === newPhoneNumberText) {
                 isExists = true;
 
-                alert("Phone number " + newPhoneNumberText + " is already exists!");
+                phoneNumberErrorText.text("Phone number is already exists");
+                newPhoneNumberInput.addClass("is-invalid");
 
                 return false;
             }

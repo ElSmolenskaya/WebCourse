@@ -19,23 +19,22 @@
     width: 400px;
 }
 
+.phonebook-container .input-group {
+    height: 60px;
+}
+
+.phonebook-container .input-group-text {
+    width: 130px;
+}
+
+.phonebook-container .input-group span,
+.phonebook-container .input-group input {
+    height: 35px;
+}
+
 .add-button button {
     color: #fdfeff;
     background-color: #3b98de;
-}
-
-.invalid-feedback {
-    display: block;
-    opacity: 0;
-}
-
-.invalid {
-    border-color: #f00;
-}
-
-.invalid ~ .invalid-feedback {
-    display: block;
-    opacity: 1;
 }
 
 .delete-button {

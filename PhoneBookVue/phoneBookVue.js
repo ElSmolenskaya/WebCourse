@@ -9,6 +9,7 @@ new Vue({
         isNewLastNameInvalid: false,
         newPhoneNumberText: "",
         isNewPhoneNumberInvalid: false,
+        isNewPhoneNumberExists: false,
         contactToDeleteIndex: -1,
         contactId: 1
     },
@@ -23,24 +24,20 @@ new Vue({
 
             var newPhoneNumber = this.newPhoneNumberText.trim();
             this.isNewPhoneNumberInvalid = newPhoneNumber.length === 0;
+            this.isNewPhoneNumberExists = false;
 
-            if (this.isNewFirstNameInvalid || this.isNewLastNameInvalid || this.isNewPhoneNumberInvalid) {
-                return;
+            if (!this.isNewPhoneNumberInvalid) {
+                if (this.contacts.some(function (contact) {
+                    return contact.phoneNumber.toUpperCase() === newPhoneNumber.toUpperCase();
+                })) {
+                    this.isNewPhoneNumberExists = true;
+                    this.isNewPhoneNumberInvalid = true;
+
+                    return;
+                }
             }
 
-            var isExists = false;
-
-            this.contacts.forEach(function (contact) {
-                if (contact.phoneNumber === newPhoneNumber) {
-                    isExists = true;
-
-                    alert("Phone number " + newPhoneNumber + " is already exists!");
-
-                    return false;
-                }
-            });
-
-            if (isExists) {
+            if (this.isNewFirstNameInvalid || this.isNewLastNameInvalid || this.isNewPhoneNumberInvalid) {
                 return;
             }
 

@@ -11,29 +11,40 @@
     <script defer src="phoneBookVue.js"></script>
 </head>
 <body>
-<div id="app" class="phonebook-container container flex-row justify-content-center p-3">
-    <h1 class="d-flex justify-content-center">Phonebook</h1>
+<div id="app" class="phonebook-container container p-3">
+    <h1 class="text-center">Phonebook</h1>
     <div class="d-flex justify-content-center">
         <form @submit.prevent id="form" class="needs-validation" novalidate>
             <div class="input-group mb-1">
                 <span class="input-group-text">First name</span>
-                <input :class="{invalid: isNewFirstNameInvalid}" v-model="newFirstNameText" type="text"
+                <input :class="{'is-invalid': isNewFirstNameInvalid}"
+                       v-model="newFirstNameText"
+                       type="text"
                        class="form-control">
                 <div class="invalid-feedback">Field is required</div>
             </div>
             <div class="input-group mb-1">
                 <span class="input-group-text">Last name</span>
-                <input :class="{invalid: isNewLastNameInvalid}" v-model="newLastNameText" type="text"
+                <input :class="{'is-invalid': isNewLastNameInvalid}"
+                       v-model="newLastNameText"
+                       type="text"
                        class="form-control">
                 <div class="invalid-feedback">Field is required</div>
             </div>
             <div class="input-group mb-1">
                 <span class="input-group-text">Phone number</span>
-                <input :class="{invalid: isNewPhoneNumberInvalid}" v-model="newPhoneNumberText" type="text"
+                <input :class="{'is-invalid': isNewPhoneNumberInvalid}"
+                       v-model="newPhoneNumberText"
+                       type="text"
                        class="form-control">
-                <div class="invalid-feedback">Field is required</div>
+                <template v-if="isNewPhoneNumberExists">
+                    <div class="invalid-feedback">Phone number is already exists</div>
+                </template>
+                <template v-else>
+                    <div class="invalid-feedback">Field is required</div>
+                </template>
             </div>
-            <div class="add-button container d-flex justify-content-end p-0">
+            <div class="add-button d-flex justify-content-end p-0">
                 <button @click="addContact" class="btn btn-primary mb-3" type="submit">Add</button>
             </div>
         </form>
@@ -51,12 +62,13 @@
             </thead>
             <tbody>
             <tr v-for="(contact, index) in contacts" :key="contact.id">
-                <td v-text="index+1"></td>
+                <td v-text="index + 1"></td>
                 <td v-text="contact.lastName"></td>
                 <td v-text="contact.firstName"></td>
                 <td v-text="contact.phoneNumber"></td>
                 <td>
-                    <button @click="showDeleteContactConfirmation(index)" class="delete-button btn btn-danger"
+                    <button @click="showDeleteContactConfirmation(index)"
+                            class="delete-button btn btn-danger"
                             type="button"
                             title="Delete contact">x
                     </button>
@@ -77,7 +89,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button @click="deleteContact" data-bs-dismiss="modal" type="button"
+                    <button @click="deleteContact"
+                            data-bs-dismiss="modal"
+                            type="button"
                             class="btn btn-primary">OK
                     </button>
                 </div>

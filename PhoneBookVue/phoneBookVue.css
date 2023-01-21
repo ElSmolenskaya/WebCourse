@@ -1,3 +1,7 @@
+[v-cloak] {
+    display: none;
+}
+
 .phonebook-container {
     width: 70%;
     background-color: #afb1b3;
@@ -24,7 +28,7 @@
 }
 
 .phonebook-container .input-group-text {
-    width: 130px;
+    min-width: 130px;
 }
 
 .phonebook-container .input-group span,

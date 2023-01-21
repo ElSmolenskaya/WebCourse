@@ -1,20 +1,3 @@
-Vue.component("base-checkbox", {
-    model: {
-        prop: "checked",
-        event: "change"
-    },
-    props: {
-        checked: Boolean
-    },
-    template: `
-    <input
-      type="checkbox"
-      class="form-check-input"
-      v-bind:checked="checked"
-      v-on:change="$emit('change', $event.target.checked)"
-    >  `
-});
-
 function get(url, data) {
     return $.get(url, data)
 }
@@ -40,8 +23,8 @@ PhoneBookService.prototype.createContact = function (contact) {
     return post(this.baseUrl + "createContact", {contact: contact});
 };
 
-PhoneBookService.prototype.deleteContact = function (id) {
-    return post(this.baseUrl + "deleteContact", {id: id});
+PhoneBookService.prototype.deleteContact = function (contactsIdToDelete) {
+    return post(this.baseUrl + "deleteContact", {contactsIdToDelete: contactsIdToDelete});
 };
 
 new Vue({
@@ -57,6 +40,7 @@ new Vue({
         isPhoneNumberInvalid: false,
         term: "",
         contactToDelete: null,
+        contactsToDeleteId: [],
         isAllContactsChecked: false,
         service: new PhoneBookService()
     },
@@ -65,7 +49,7 @@ new Vue({
         this.loadContacts();
 
         this.contacts.forEach(function (contact) {
-            contact.checked = this.isAllContactsChecked;
+            contact.isChecked = false;
         });
     },
 
@@ -109,6 +93,11 @@ new Vue({
                 }
 
                 self.loadContacts();
+
+                /*self.contactsIdToDelete.forEach(function (id) {
+                    self.$set(self.contacts[id], "isChecked", true);
+                });*/
+
                 self.firstName = "";
                 self.lastName = "";
                 self.phoneNumber = "";
@@ -128,25 +117,53 @@ new Vue({
         deleteContact: function () {
             var self = this;
 
-            this.service.deleteContact(this.contactToDelete.id).done(function (response) {
+            if (this.contactsIdToDelete.length === 0) {
+                this.contactsIdToDelete.push(this.contactToDelete.id);
+            }
+
+            this.service.deleteContact(self.contactsIdToDelete).done(function (response) {
                 if (!response.success) {
                     alert(response.message);
                     return;
                 }
 
                 self.loadContacts();
+
+                self.isAllContactsChecked = false;
+                self.contactsIdToDelete.clear();
             }).fail(function () {
-                alert("Contact wasn't deleted");
+                alert("Contacts weren't deleted");
             });
         },
 
         checkAllContacts: function () {
-            console.log("this.isAllContactsChecked=" + this.isAllContactsChecked);
+            var self = this;
 
             this.contacts.forEach(function (contact) {
-                contact.checked = this.isAllContactsChecked;
-                console.log(contact.checked);
+                self.$set(contact, "isChecked", self.isAllContactsChecked);
             });
+
+            if (this.isAllContactsChecked) {
+                for (var i = 0; i < this.contacts.length; i++) {
+                    this.contactsIdToDelete.push(this.contacts[i].id);
+                }
+            } else {
+                this.contactsIdToDelete.clear();
+            }
+        },
+
+        checkContact: function (contact) {
+            if (this.isAllContactsChecked) {
+                this.isAllContactsChecked = false;
+            }
+
+            if (contact.isChecked) {
+                this.contactsIdToDelete.push(contact.id);
+            } else {
+                this.contactsIdToDelete = this.contactsIdToDelete.filter(function (c) {
+                    return c !== contact.id;
+                });
+            }
         }
     }
 });

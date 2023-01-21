@@ -22,10 +22,12 @@ router.get("/api/getContacts", function (req, res) {
 });
 
 router.post("/api/deleteContact", function (req, res) {
-    var id = req.body.id;
+    var contactsIdToDelete = req.body.contactsIdToDelete;
 
     contacts = contacts.filter(function (c) {
-        return c.id !== id;
+        return !contactsIdToDelete.some(function (id) {
+            return c.id === id
+        });
     });
 
     res.send({

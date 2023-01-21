@@ -40,8 +40,10 @@
                 <thead>
                 <tr class="table-light">
                     <th scope="col" class="check-contact-column">
-                        <base-checkbox v-model="isAllContactsChecked" @change="checkAllContacts">
-                        </base-checkbox>
+                        <input class="form-check-input"
+                               type="checkbox"
+                               v-model="isAllContactsChecked"
+                               @change="checkAllContacts">
                     </th>
                     <th scope="col">№</th>
                     <th scope="col">Last name</th>
@@ -52,7 +54,12 @@
                 </thead>
                 <tbody v-cloak>
                 <tr v-for="(contact, index) in contacts" :key="contact.id">
-                    <td><base-checkbox v-model="contact.checked"></base-checkbox></td>
+                    <td>
+                        <input class="form-check-input"
+                               type="checkbox"
+                               v-model="contact.isChecked"
+                               @change="checkContact(contact)">
+                    </td>
                     <td>{% verbatim %}{{ index+1 }}{% endverbatim %}</td>
                     <td v-text="contact.firstName"></td>
                     <td v-text="contact.lastName"></td>
@@ -60,14 +67,14 @@
                     <td>
                         <button @click="showDeleteContactConfirmation(contact)" type="button"
                                 class="delete-button btn btn-danger"
-                                title="Delete contact">X
+                                title="Delete contact">x
                         </button>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <div ref="deleteConfirmDialog" class="modal" tabindex="-1">
+        <div ref="deleteConfirmDialog" class="modal fade" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -75,7 +82,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Do you really want to delete the contact?</p>
+                        <p>Do you really want to delete the contact(s)?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

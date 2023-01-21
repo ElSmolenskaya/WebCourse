@@ -1,3 +1,7 @@
+[v-cloak] {
+    display: none;
+}
+
 .todo-list-container {
     width: 80%;
     background-color: #e7d5ce;
@@ -17,11 +21,10 @@
 .todo-list-container form,
 .todo-list-container ul {
     width: 90%;
-
 }
 
 .todo-list-container ul button {
-    width: 80px;
+    min-width: 80px;
     border-width: 2px;
     border-style: solid;
 }

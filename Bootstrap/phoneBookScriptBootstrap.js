@@ -26,7 +26,6 @@ $(function () {
         });
 
         contactsCount--;
-        console.log(contactsCount);
     });
 
     function addContact(contact, contactNumber) {

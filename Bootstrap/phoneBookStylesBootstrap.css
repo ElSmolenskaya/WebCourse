@@ -23,7 +23,7 @@
     width: 130px;
 }
 
-.phonebook-container .input-group {
+.phonebook-container form .input-group {
     height: 60px;
 }
 

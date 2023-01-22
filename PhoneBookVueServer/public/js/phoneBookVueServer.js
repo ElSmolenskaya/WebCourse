@@ -38,27 +38,51 @@ new Vue({
         isLastNameInvalid: false,
         phoneNumber: "",
         isPhoneNumberInvalid: false,
+        isPhoneNumberExists: false,
         term: "",
         contactToDelete: null,
-        contactsToDeleteId: [],
-        isAllContactsChecked: false,
+        areAllContactsChecked: false,
         service: new PhoneBookService()
     },
 
     created: function () {
-        this.loadContacts();
-
-        this.contacts.forEach(function (contact) {
-            contact.isChecked = false;
-        });
+        this.loadContacts(false);
     },
 
     methods: {
-        loadContacts: function () {
+        getCheckedContacts: function () {
+            return this.contacts.filter(function (contact) {
+                return contact.isChecked
+            }).map(function (contact) {
+                return contact.id;
+            });
+        },
+
+        loadContacts: function (checkContacts) {
             var self = this;
 
             this.service.getContacts(this.term).done(function (contacts) {
+                var checkedContacts = [];
+
+                if (checkContacts) {
+                    checkedContacts = self.getCheckedContacts();
+                }
+
                 self.contacts = contacts;
+
+                self.contacts.forEach(function (contact) {
+                    self.$set(contact, "isChecked", false);
+                });
+
+                checkedContacts.forEach(function (id) {
+                    self.contacts.filter(function (contact) {
+                        return contact.id === id;
+                    }).forEach(function (checkedContact) {
+                        checkedContact.isChecked = true;
+                    });
+                });
+
+                self.areAllContactsChecked = false;
             }).fail(function () {
                 alert("Contact's list hasn't been loaded");
             });
@@ -75,6 +99,18 @@ new Vue({
 
             var newPhoneNumber = this.phoneNumber.trim();
             this.isPhoneNumberInvalid = newPhoneNumber.length === 0;
+            this.isPhoneNumberExists = false;
+
+            if (!this.isPhoneNumberInvalid) {
+                if (this.contacts.some(function (contact) {
+                    return contact.phoneNumber.toUpperCase() === newPhoneNumber.toUpperCase();
+                })) {
+                    this.isPhoneNumberExists = true;
+                    this.isPhoneNumberInvalid = true;
+
+                    return;
+                }
+            }
 
             if (this.isFirstNameInvalid || this.isLastNameInvalid || this.isPhoneNumberInvalid) {
                 return;
@@ -92,16 +128,11 @@ new Vue({
                     return;
                 }
 
-                self.loadContacts();
-
-                /*self.contactsIdToDelete.forEach(function (id) {
-                    self.$set(self.contacts[id], "isChecked", true);
-                });*/
+                self.loadContacts(true);
 
                 self.firstName = "";
                 self.lastName = "";
                 self.phoneNumber = "";
-
             }).fail(function () {
                 alert("Contact wasn't created");
             });
@@ -117,20 +148,19 @@ new Vue({
         deleteContact: function () {
             var self = this;
 
-            if (this.contactsIdToDelete.length === 0) {
-                this.contactsIdToDelete.push(this.contactToDelete.id);
+            var contactsToDelete = this.getCheckedContacts();
+
+            if (contactsToDelete.length === 0) {
+                contactsToDelete.push(this.contactToDelete.id);
             }
 
-            this.service.deleteContact(self.contactsIdToDelete).done(function (response) {
+            this.service.deleteContact(contactsToDelete).done(function (response) {
                 if (!response.success) {
                     alert(response.message);
                     return;
                 }
 
-                self.loadContacts();
-
-                self.isAllContactsChecked = false;
-                self.contactsIdToDelete.clear();
+                self.loadContacts(false);
             }).fail(function () {
                 alert("Contacts weren't deleted");
             });
@@ -140,29 +170,13 @@ new Vue({
             var self = this;
 
             this.contacts.forEach(function (contact) {
-                self.$set(contact, "isChecked", self.isAllContactsChecked);
+                contact.isChecked = self.areAllContactsChecked;
             });
-
-            if (this.isAllContactsChecked) {
-                for (var i = 0; i < this.contacts.length; i++) {
-                    this.contactsIdToDelete.push(this.contacts[i].id);
-                }
-            } else {
-                this.contactsIdToDelete.clear();
-            }
         },
 
-        checkContact: function (contact) {
-            if (this.isAllContactsChecked) {
-                this.isAllContactsChecked = false;
-            }
-
-            if (contact.isChecked) {
-                this.contactsIdToDelete.push(contact.id);
-            } else {
-                this.contactsIdToDelete = this.contactsIdToDelete.filter(function (c) {
-                    return c !== contact.id;
-                });
+        checkContact: function () {
+            if (this.areAllContactsChecked) {
+                this.areAllContactsChecked = false;
             }
         }
     }

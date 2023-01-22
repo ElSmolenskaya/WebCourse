@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookBootstrap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookScriptBootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/Bootstrap/phoneBookStylesBootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/public/css/phoneBookVueServer.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/css/phoneBookVueServer.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoListVue/todoListVue.css" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoListVue/todoListVue.html" beforeDir="false" afterPath="$PROJECT_DIR$/TodoListVue/todoListVue.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,14 +88,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="87181000" />
-    </task>
-    <task id="LOCAL-00001" summary="Создание html-проекта">
-      <created>1668679815711</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1668679815711</updated>
+      <workItem from="1673514027070" duration="110786000" />
     </task>
     <task id="LOCAL-00002" summary="Создание html-проекта">
       <created>1668679911388</created>
@@ -435,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674135839135</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Доработаны модули Bootstrap, TodoListVue, PhoneBookVue, PhoneBookVueServer">
+      <created>1674284918774</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1674284918775</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +452,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Разработка модуля ObjectsPractice" />
     <MESSAGE value="Исправлены ошибки в модуле CssText" />
     <MESSAGE value="Создание модуля TodoList" />
     <MESSAGE value="Исправлены мелкие ошибки в css-файлах" />
@@ -479,7 +476,8 @@
     <MESSAGE value="Исправлены ошибки в модуле Bootstrap" />
     <MESSAGE value="Исправлены ошибки в модуле Underscore" />
     <MESSAGE value="Исправлены ошибки в модуле PhoneBookVue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле PhoneBookVue" />
+    <MESSAGE value="Доработаны модули Bootstrap, TodoListVue, PhoneBookVue, PhoneBookVueServer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработаны модули Bootstrap, TodoListVue, PhoneBookVue, PhoneBookVueServer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -23,25 +23,26 @@
     width: 400px;
 }
 
-.add-button button,
+.phonebook-container .input-group-text {
+    min-width: 130px;
+}
+
+.add-button,
 .search-button {
     color: #fdfeff;
     background-color: #3b98de;
-    width: 80px
+    min-width: 80px
 }
 
-.invalid-feedback {
-    display: block;
-    opacity: 0;
+.create-contact-form .input-group {
+    height: 60px;
 }
 
-.invalid {
-    border-color: #f00;
-}
-
-.invalid ~ .invalid-feedback {
-    display: block;
-    opacity: 1;
+.phonebook-container .input-group span,
+.phonebook-container .input-group input,
+.search-button,
+.add-button {
+    height: 35px;
 }
 
 .delete-button {

@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Webpack/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/bin/www" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBook.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBookService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/frontend/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/views/error.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/views/index.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Webpack/views/layout.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.html" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVue/phoneBookVue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/public/css/phoneBookVueServer.css" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/css/phoneBookVueServer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/views/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,14 +145,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="154656000" />
-    </task>
-    <task id="LOCAL-00003" summary="Создание html-проекта">
-      <created>1668679964231</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1668679964231</updated>
+      <workItem from="1673514027070" duration="154972000" />
     </task>
     <task id="LOCAL-00004" summary="Создание CSS Text проекта">
       <created>1669281955642</created>
@@ -511,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674393058476</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Исправлены ошибки в модулях PhoneBookVue, PhoneBookVueServer. Создан модуль Webpack">
+      <created>1674996946354</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1674996946354</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +509,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Создание модуля TodoList" />
     <MESSAGE value="Исправлены мелкие ошибки в css-файлах" />
     <MESSAGE value="Исправлены ошибьки в модуле ObjectsPractice" />
     <MESSAGE value="Создание модуля TemperatureConverter" />
@@ -555,7 +533,8 @@
     <MESSAGE value="Исправлены ошибки в модуле PhoneBookVue" />
     <MESSAGE value="Доработаны модули Bootstrap, TodoListVue, PhoneBookVue, PhoneBookVueServer" />
     <MESSAGE value="Доработаны модули TodoListVue, PhoneBookVue, PhoneBookVueServer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доработаны модули TodoListVue, PhoneBookVue, PhoneBookVueServer" />
+    <MESSAGE value="Исправлены ошибки в модулях PhoneBookVue, PhoneBookVueServer. Создан модуль Webpack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модулях PhoneBookVue, PhoneBookVueServer. Создан модуль Webpack" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

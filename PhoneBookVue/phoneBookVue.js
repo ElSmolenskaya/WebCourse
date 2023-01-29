@@ -54,7 +54,7 @@ new Vue({
             this.newPhoneNumberText = "";
         },
 
-        showDeleteContactConfirmation: function (contactToDeleteIndex) {
+        showDeleteContactConfirmationModal: function (contactToDeleteIndex) {
             this.contactToDeleteIndex = contactToDeleteIndex;
 
             var deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);

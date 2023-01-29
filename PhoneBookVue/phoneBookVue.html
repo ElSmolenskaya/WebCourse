@@ -14,7 +14,7 @@
 <div v-cloak id="app" class="phonebook-container container p-3">
     <h1 class="text-center">Phonebook</h1>
     <div class="d-flex justify-content-center">
-        <form @submit.prevent id="form" class="needs-validation" novalidate>
+        <form @submit.prevent id="form" class="container needs-validation p-0" novalidate>
             <div class="input-group mb-1">
                 <span class="input-group-text">First name</span>
                 <input :class="{'is-invalid': isNewFirstNameInvalid}"
@@ -50,7 +50,7 @@
         </form>
     </div>
     <div class="table-responsive">
-        <table class="table table-success table-striped table-bordered table-hover">
+        <table class="table table-success table-striped table-bordered table-hover m-0">
             <thead>
             <tr class="table-light">
                 <th scope="col">№</th>
@@ -67,7 +67,7 @@
                 <td v-text="contact.firstName"></td>
                 <td v-text="contact.phoneNumber"></td>
                 <td>
-                    <button @click="showDeleteContactConfirmation(index)"
+                    <button @click="showDeleteContactConfirmationModal(index)"
                             class="delete-button btn btn-danger"
                             type="button"
                             title="Delete contact">x

@@ -138,7 +138,7 @@ new Vue({
             });
         },
 
-        showDeleteContactConfirmation: function (contact) {
+        showDeleteContactConfirmationModal: function (contact) {
             this.contactToDelete = contact;
 
             var deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);

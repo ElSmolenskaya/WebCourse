@@ -1,22 +1,23 @@
 .phonebook-container {
-    width: 70%;
     background-color: #afb1b3;
     font-family: Arial, sans-serif;
     color: #4b4a4a;
 }
 
-@media screen and (max-width: 960px) {
-    .phonebook-container {
+@media (min-width: 576px) {
+    .phonebook-container form {
         width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .phonebook-container form {
+        width: 500px;
     }
 }
 
 .phonebook-container h1 {
     color: #f8fcfe;
-}
-
-.phonebook-container form {
-    width: 400px;
 }
 
 .phonebook-container .input-group {

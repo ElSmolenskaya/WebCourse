@@ -23,8 +23,8 @@ PhoneBookService.prototype.createContact = function (contact) {
     return post(this.baseUrl + "createContact", {contact: contact});
 };
 
-PhoneBookService.prototype.deleteContact = function (contactsIdToDelete) {
-    return post(this.baseUrl + "deleteContact", {contactsIdToDelete: contactsIdToDelete});
+PhoneBookService.prototype.deleteContacts = function (contactsIdsToDelete) {
+    return post(this.baseUrl + "deleteContacts", {contactsIdsToDelete: contactsIdsToDelete});
 };
 
 new Vue({
@@ -40,51 +40,50 @@ new Vue({
         isPhoneNumberInvalid: false,
         isPhoneNumberExists: false,
         term: "",
-        contactToDelete: null,
+        contactsIdsToDelete: [],
         areAllContactsChecked: false,
-        service: new PhoneBookService()
+        service: new PhoneBookService(),
+        errorMessage: ""
     },
 
     created: function () {
-        this.loadContacts(false);
+        this.loadContacts();
     },
 
     methods: {
-        getCheckedContacts: function () {
+        getCheckedContactsIds: function () {
             return this.contacts.filter(function (contact) {
-                return contact.isChecked
+                return contact.isChecked;
             }).map(function (contact) {
                 return contact.id;
             });
         },
 
-        loadContacts: function (checkContacts) {
+        loadContacts: function () {
             var self = this;
 
             this.service.getContacts(this.term).done(function (contacts) {
-                var checkedContacts = [];
+                var checkedContactsIds = self.getCheckedContactsIds();
 
-                if (checkContacts) {
-                    checkedContacts = self.getCheckedContacts();
-                }
+                contacts.forEach(function (contact) {
+                    contact.isChecked = false;
+                });
 
                 self.contacts = contacts;
 
-                self.contacts.forEach(function (contact) {
-                    self.$set(contact, "isChecked", false);
-                });
-
-                checkedContacts.forEach(function (id) {
-                    self.contacts.filter(function (contact) {
+                checkedContactsIds.forEach(function (id) {
+                    var contact = self.contacts.find(function (contact) {
                         return contact.id === id;
-                    }).forEach(function (checkedContact) {
-                        checkedContact.isChecked = true;
                     });
+
+                    if (contact) {
+                        contact.isChecked = true;
+                    }
                 });
 
                 self.areAllContactsChecked = false;
             }).fail(function () {
-                alert("Contact's list hasn't been loaded");
+                self.showErrorMessageModal("Contact's list hasn't been loaded");
             });
         },
 
@@ -124,45 +123,80 @@ new Vue({
 
             this.service.createContact(request).done(function (response) {
                 if (!response.success) {
-                    alert(response.message);
+                    if (response.errorsCodes.includes(0)) {
+                        self.showErrorMessageModal(response.messages.join(", "));
+
+                        return;
+                    }
+
+                    if (response.errorsCodes.includes(1)) {
+                        self.isFirstNameInvalid = true;
+                    }
+
+                    if (response.errorsCodes.includes(2)) {
+                        self.islastNameInvalid = true;
+                    }
+
+                    if (response.errorsCodes.includes(3)) {
+                        self.isNewPhoneNumberInvalid = true;
+                    }
+
+                    if (response.errorsCodes.includes(4)) {
+                        self.isPhoneNumberExists = true;
+                        self.isPhoneNumberInvalid = true;
+                    }
+
                     return;
                 }
 
-                self.loadContacts(true);
+                self.loadContacts();
 
                 self.firstName = "";
                 self.lastName = "";
                 self.phoneNumber = "";
             }).fail(function () {
-                alert("Contact wasn't created");
+                self.showErrorMessageModal("Contact wasn't created");
             });
         },
 
-        showDeleteContactConfirmationModal: function (contact) {
-            this.contactToDelete = contact;
+        showErrorMessageModal: function (errorMessage) {
+            this.errorMessage = errorMessage;
+
+            var errorMessageModal = new bootstrap.Modal(this.$refs.errorMessageDialog);
+            errorMessageModal.show();
+        },
+
+        showDeleteContactsConfirmationModal: function (contact) {
+            if (contact) {
+                this.contactsIdsToDelete.push(contact.id);
+            } else {
+                this.contactsIdsToDelete = this.getCheckedContactsIds();
+            }
+
+
+            if (this.contactsIdsToDelete.length === 0) {
+                this.showErrorMessageModal("Contacts to delete weren't selected");
+
+                return;
+            }
 
             var deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);
             deleteConfirmationModal.show();
         },
 
-        deleteContact: function () {
+        deleteContacts: function () {
             var self = this;
 
-            var contactsToDelete = this.getCheckedContacts();
-
-            if (contactsToDelete.length === 0) {
-                contactsToDelete.push(this.contactToDelete.id);
-            }
-
-            this.service.deleteContact(contactsToDelete).done(function (response) {
+            this.service.deleteContacts(this.contactsIdsToDelete).done(function (response) {
                 if (!response.success) {
-                    alert(response.message);
+                    self.showErrorMessageModal(response.message);
+
                     return;
                 }
 
-                self.loadContacts(false);
+                self.loadContacts();
             }).fail(function () {
-                alert("Contacts weren't deleted");
+                self.showErrorMessageModal("Contacts weren't deleted");
             });
         },
 

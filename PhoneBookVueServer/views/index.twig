@@ -31,7 +31,7 @@
                            type="text"
                            class="form-control">
                     <template v-if="isPhoneNumberExists">
-                        <div class="invalid-feedback">Phone number is already exists</div>
+                        <div class="invalid-feedback">Contact's phone number already exists</div>
                     </template>
                     <template v-else>
                         <div class="invalid-feedback">Field is required</div>
@@ -43,7 +43,7 @@
             </form>
         </div>
         <div class="d-flex justify-content-center mb-2">
-            <form @submit.prevent="loadContacts(true)" id="form" class="needs-validation container p-0" novalidate>
+            <form @submit.prevent="loadContacts" id="form" class="needs-validation container p-0" novalidate>
                 <div class="input-group mb-1">
                     <span class="input-group-text">Search</span>
                     <input v-model="term" type="text" class="form-control">
@@ -65,7 +65,13 @@
                     <th scope="col">Last name</th>
                     <th scope="col">First name</th>
                     <th scope="col">Phone number</th>
-                    <th scope="col" class="delete-contact-column"></th>
+                    <th scope="col" class="delete-contact-column">
+                        <button @click="showDeleteContactsConfirmationModal()"
+                                type="button"
+                                class="delete-button btn btn-danger"
+                                title="Delete selected contacts">x
+                        </button>
+                    </th>
                 </tr>
                 </thead>
                 <tbody v-cloak>
@@ -81,7 +87,8 @@
                     <td v-text="contact.lastName"></td>
                     <td v-text="contact.phoneNumber"></td>
                     <td>
-                        <button @click="showDeleteContactConfirmationModal(contact)" type="button"
+                        <button @click="showDeleteContactsConfirmationModal(contact)"
+                                type="button"
                                 class="delete-button btn btn-danger"
                                 title="Delete contact">x
                         </button>
@@ -102,9 +109,27 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button @click="deleteContact" data-bs-dismiss="modal" type="button"
+                        <button @click="deleteContacts"
+                                data-bs-dismiss="modal"
+                                type="button"
                                 class="btn btn-primary">OK
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ref="errorMessageDialog" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Error</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p v-text="errorMessage"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

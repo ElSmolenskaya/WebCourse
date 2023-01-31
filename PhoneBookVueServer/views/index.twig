@@ -105,7 +105,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Do you really want to delete the contact(s)?</p>
+                        <div class="alert alert-warning" role="alert">
+                            <p>Do you really want to delete the contact(s)?</p>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -126,7 +128,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p v-text="errorMessage"></p>
+                        <div class="alert alert-danger" role="alert">
+                            <p v-text="errorMessage"></p>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

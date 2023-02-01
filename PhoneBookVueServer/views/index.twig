@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-center mb-4">
             <form @submit.prevent="createContact"
                   id="form"
-                  class="create-contact-form needs-validation container p-0"
+                  class="create-contact-form needs-validation p-0"
                   novalidate>
                 <div class="input-group mb-1">
                     <span class="input-group-text">First name</span>
@@ -43,7 +43,7 @@
             </form>
         </div>
         <div class="d-flex justify-content-center mb-2">
-            <form @submit.prevent="loadContacts" id="form" class="needs-validation container p-0" novalidate>
+            <form @submit.prevent="loadContacts" id="form" class="needs-validation p-0" novalidate>
                 <div class="input-group mb-1">
                     <span class="input-group-text">Search</span>
                     <input v-model="term" type="text" class="form-control">

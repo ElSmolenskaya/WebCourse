@@ -21,11 +21,11 @@ router.get("/api/getContacts", function (req, res) {
   res.send(filteredContacts);
 });
 
-router.post("/api/deleteContact", function (req, res) {
-  var contactsIdToDelete = req.body.contactsIdToDelete;
+router.post("/api/deleteContacts", function (req, res) {
+  var contactsIdsToDelete = req.body.contactsIdsToDelete;
 
   contacts = contacts.filter(function (c) {
-    return !contactsIdToDelete.some(function (id) {
+    return !contactsIdsToDelete.some(function (id) {
       return c.id === id
     });
   });
@@ -39,49 +39,49 @@ router.post("/api/deleteContact", function (req, res) {
 router.post("/api/createContact", function (req, res) {
   var contact = req.body.contact;
 
-  if (!contact) {
-    res.send({
-      success: false,
-      message: "Incorrect request format"
-    });
+  var responseInformation = {
+    success: true,
+    messages: [],
+    errorsCodes: []
+  }
 
+  if (!contact) {
+    responseInformation.success = false;
+    responseInformation.errorsCodes.push(0);
+    responseInformation.messages.push("Incorrect request format");
+
+    res.send(responseInformation);
     return;
   }
 
   if (!contact.firstName) {
-    res.send({
-      success: false,
-      message: "Please, enter contact's first name"
-    });
-
-    return;
+    responseInformation.success = false;
+    responseInformation.errorsCodes.push(1);
+    responseInformation.messages.push("Please, enter contact's first name");
   }
 
   if (!contact.lastName) {
-    res.send({
-      success: false,
-      message: "Please, enter contact's last name"
-    });
-
-    return;
+    responseInformation.success = false;
+    responseInformation.errorsCodes.push(2);
+    responseInformation.messages.push("Please, enter contact's last name");
   }
 
   if (!contact.phoneNumber) {
-    res.send({
-      success: false,
-      message: "Please, enter contact's phone number"
-    });
-
-    return;
+    responseInformation.success = false;
+    responseInformation.errorsCodes.push(3);
+    responseInformation.messages.push("Please, enter contact's phone number");
   }
 
   if (contacts.some(function (c) {
     return c.phoneNumber.toUpperCase() === contact.phoneNumber.toUpperCase();
   })) {
-    res.send({
-      success: false,
-      message: "Contact's phone number already exists "
-    });
+    responseInformation.success = false;
+    responseInformation.errorsCodes.push(4);
+    responseInformation.messages.push("Contact's phone number already exists");
+  }
+
+  if (responseInformation.success === false){
+    res.send(responseInformation);
 
     return;
   }
@@ -95,10 +95,7 @@ router.post("/api/createContact", function (req, res) {
 
   newContactId++;
 
-  res.send({
-    success: true,
-    message: null
-  });
+  res.send(responseInformation);
 });
 
 module.exports = router;

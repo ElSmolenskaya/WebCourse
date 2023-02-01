@@ -25,7 +25,7 @@ export default class PhoneBookService {
         return post(this.baseUrl + "createContact", {contact});
     }
 
-    deleteContact(contactsIdToDelete) {
-        return post(this.baseUrl + "deleteContact", {contactsIdToDelete});
+    deleteContacts(contactsIdsToDelete) {
+        return post(this.baseUrl + "deleteContacts", {contactsIdsToDelete});
     }
 }

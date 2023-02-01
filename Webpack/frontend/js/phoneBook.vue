@@ -4,7 +4,7 @@
     <div class="d-flex justify-content-center mb-4">
       <form @submit.prevent="createContact"
             id="form"
-            class="create-contact-form needs-validation container p-0"
+            class="create-contact-form needs-validation p-0"
             novalidate>
         <div class="input-group mb-1">
           <span class="input-group-text">First name</span>
@@ -29,7 +29,7 @@
                  type="text"
                  class="form-control">
           <template v-if="isPhoneNumberExists">
-            <div class="invalid-feedback">Phone number is already exists</div>
+            <div class="invalid-feedback">Contact's phone number already exists</div>
           </template>
           <template v-else>
             <div class="invalid-feedback">Field is required</div>
@@ -41,9 +41,9 @@
       </form>
     </div>
     <div class="d-flex justify-content-center mb-2">
-      <form @submit.prevent="loadContacts(true)"
+      <form @submit.prevent="loadContacts"
             id="form"
-            class="needs-validation container p-0"
+            class="needs-validation p-0"
             novalidate>
         <div class="input-group mb-1">
           <span class="input-group-text">Search</span>
@@ -66,7 +66,13 @@
           <th scope="col">Last name</th>
           <th scope="col">First name</th>
           <th scope="col">Phone number</th>
-          <th scope="col" class="delete-contact-column"></th>
+          <th scope="col" class="delete-contact-column">
+            <button @click="showDeleteContactsConfirmationModal()"
+                    type="button"
+                    class="delete-button btn btn-danger"
+                    title="Delete selected contacts">x
+            </button>
+          </th>
         </tr>
         </thead>
         <tbody v-cloak>
@@ -82,7 +88,8 @@
           <td v-text="contact.lastName"></td>
           <td v-text="contact.phoneNumber"></td>
           <td>
-            <button @click="showDeleteContactConfirmationModal(contact)" type="button"
+            <button @click="showDeleteContactsConfirmationModal(contact)"
+                    type="button"
                     class="delete-button btn btn-danger"
                     title="Delete contact">x
             </button>
@@ -99,13 +106,35 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Do you really want to delete the contact(s)?</p>
+            <div class="alert alert-warning" role="alert">
+              <p>Do you really want to delete the contact(s)?</p>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button @click="deleteContact" data-bs-dismiss="modal" type="button"
+            <button @click="deleteContacts"
+                    data-bs-dismiss="modal"
+                    type="button"
                     class="btn btn-primary">OK
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ref="errorMessageDialog" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Error</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-danger" role="alert">
+              <p v-text="errorMessage"></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -130,48 +159,47 @@ export default {
       isPhoneNumberInvalid: false,
       isPhoneNumberExists: false,
       term: "",
-      contactToDelete: null,
+      contactsIdsToDelete: [],
       areAllContactsChecked: false,
-      service: new PhoneBookService()
+      service: new PhoneBookService(),
+      errorMessage: ""
     };
   },
 
   created() {
-    this.loadContacts(false);
+    this.loadContacts();
   },
 
   methods: {
-    getCheckedContacts() {
+    getCheckedContactsIds() {
       return this.contacts
           .filter(contact => contact.isChecked)
           .map(contact => contact.id);
     },
 
-    loadContacts(checkContacts) {
+    loadContacts() {
       this.service.getContacts(this.term).done(contacts => {
-        let checkedContacts = [];
+        let checkedContactsIds = this.getCheckedContactsIds();
 
-        if (checkContacts) {
-          checkedContacts = this.getCheckedContacts();
-        }
+        contacts.forEach(contact => {
+          contact.isChecked = false;
+        });
 
         this.contacts = contacts;
 
-        this.contacts.forEach(contact => {
-          this.$set(contact, "isChecked", false);
-        });
+        checkedContactsIds.forEach(id => {
+          let contact = this.contacts.find(function (contact) {
+            return contact.id === id;
+          });
 
-        checkedContacts.forEach(id => {
-          this.contacts
-              .filter(contact => contact.id === id)
-              .forEach(checkedContact => {
-                checkedContact.isChecked = true;
-              });
+          if (contact) {
+            contact.isChecked = true;
+          }
         });
 
         this.areAllContactsChecked = false;
       }).fail(function () {
-        alert("Contact's list hasn't been loaded");
+        this.showErrorMessageModal("Contact's list hasn't been loaded");
       });
     },
 
@@ -207,43 +235,75 @@ export default {
 
       this.service.createContact(request).done(response => {
         if (!response.success) {
-          alert(response.message);
+          if (response.errorsCodes.includes(0)) {
+            this.showErrorMessageModal(response.messages.join(", "));
+
+            return;
+          }
+
+          if (response.errorsCodes.includes(1)) {
+            this.isFirstNameInvalid = true;
+          }
+
+          if (response.errorsCodes.includes(2)) {
+            this.isLastNameInvalid = true;
+          }
+
+          if (response.errorsCodes.includes(3)) {
+            this.isNewPhoneNumberInvalid = true;
+          }
+
+          if (response.errorsCodes.includes(4)) {
+            this.isPhoneNumberExists = true;
+            this.isPhoneNumberInvalid = true;
+          }
+
           return;
         }
 
-        this.loadContacts(true);
+        this.loadContacts();
 
         this.firstName = "";
         this.lastName = "";
         this.phoneNumber = "";
       }).fail(function () {
-        alert("Contact wasn't created");
+        this.showErrorMessageModal("Contact wasn't created");
       });
     },
 
-    showDeleteContactConfirmationModal(contact) {
-      this.contactToDelete = contact;
+    showErrorMessageModal(errorMessage) {
+      this.errorMessage = errorMessage;
+
+      const errorMessageModal = new bootstrap.Modal(this.$refs.errorMessageDialog);
+      errorMessageModal.show();
+    },
+
+    showDeleteContactsConfirmationModal(contact) {
+      if (contact) {
+        this.contactsIdsToDelete.push(contact.id);
+      } else {
+        this.contactsIdsToDelete = this.getCheckedContactsIds();
+      }
+
+      if (this.contactsIdsToDelete.length === 0) {
+        this.showErrorMessageModal("Contacts to delete weren't selected");
+
+        return;
+      }
 
       const deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);
       deleteConfirmationModal.show();
     },
 
-    deleteContact() {
-      let contactsToDelete = this.getCheckedContacts();
-
-      if (contactsToDelete.length === 0) {
-        contactsToDelete.push(this.contactToDelete.id);
-      }
-
-      this.service.deleteContact(contactsToDelete).done(response => {
+    deleteContacts() {
+      this.service.deleteContacts(this.contactsIdsToDelete).done(response => {
         if (!response.success) {
-          alert(response.message);
-          return;
+          this.showErrorMessageModal(response.message);
         }
 
-        this.loadContacts(false);
+        this.loadContacts();
       }).fail(function () {
-        alert("Contacts weren't deleted");
+        this.showErrorMessageModal("Contacts weren't deleted");
       });
     },
 

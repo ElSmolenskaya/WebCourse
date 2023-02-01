@@ -134,7 +134,7 @@ new Vue({
                     }
 
                     if (response.errorsCodes.includes(2)) {
-                        self.islastNameInvalid = true;
+                        self.isLastNameInvalid = true;
                     }
 
                     if (response.errorsCodes.includes(3)) {

@@ -14,7 +14,7 @@
 <div v-cloak id="app" class="phonebook-container container p-3">
     <h1 class="text-center">Phonebook</h1>
     <div class="d-flex justify-content-center">
-        <form @submit.prevent id="form" class="container needs-validation p-0" novalidate>
+        <form @submit.prevent id="form" class="needs-validation p-0" novalidate>
             <div class="input-group mb-1">
                 <span class="input-group-text">First name</span>
                 <input :class="{'is-invalid': isNewFirstNameInvalid}"

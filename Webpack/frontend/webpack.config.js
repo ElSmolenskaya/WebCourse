@@ -27,17 +27,15 @@ module.exports = (env, argv) => {
             rules: [
                 {
                     test: /\.scss$/,
-                    use: argv.env.WEBPACK_SERVE ? ["style-loader", "css-loader", "saas-loader"] : [
-                        MiniCssExtractPlugin.loader,
-                        "css-loader",
-                        "sass-loader"
-                    ]
+                    use: argv.env.WEBPACK_SERVE
+                        ? ["style-loader", "css-loader", "saas-loader"]
+                        : [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
                 },
                 {
                     test: /\.css$/,
-                    use: argv.env.WEBPACK_SERVE ? ["style-loader", "css-loader"] : [
-                        MiniCssExtractPlugin.loader, "css-loader"
-                    ]
+                    use: argv.env.WEBPACK_SERVE
+                        ? ["style-loader", "css-loader"]
+                        : [MiniCssExtractPlugin.loader, "css-loader"]
                 },
                 {
                     test: /\.(png|jpg|gif|svg|ttf|eot|woff|woff2)$/,

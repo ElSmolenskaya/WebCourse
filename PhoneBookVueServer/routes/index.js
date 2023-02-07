@@ -43,7 +43,7 @@ router.post("/api/createContact", function (req, res) {
         success: true,
         messages: [],
         errorsCodes: []
-    }
+    };
 
     if (!contact) {
         responseInformation.success = false;
@@ -80,7 +80,7 @@ router.post("/api/createContact", function (req, res) {
         responseInformation.messages.push("Contact's phone number already exists");
     }
 
-    if (responseInformation.success === false){
+    if (responseInformation.success === false) {
         res.send(responseInformation);
 
         return;

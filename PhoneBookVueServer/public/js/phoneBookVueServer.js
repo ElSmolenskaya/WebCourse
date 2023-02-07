@@ -39,11 +39,13 @@ new Vue({
         phoneNumber: "",
         isPhoneNumberInvalid: false,
         isPhoneNumberExists: false,
+        areContactsSelected: false,
         term: "",
         contactsIdsToDelete: [],
         areAllContactsChecked: false,
         service: new PhoneBookService(),
-        errorMessage: ""
+        errorMessage: "",
+        confirmationMessage: ""
     },
 
     created: function () {
@@ -70,6 +72,7 @@ new Vue({
                 });
 
                 self.contacts = contacts;
+                self.areContactsSelected = false;
 
                 checkedContactsIds.forEach(function (id) {
                     var contact = self.contacts.find(function (contact) {
@@ -78,6 +81,7 @@ new Vue({
 
                     if (contact) {
                         contact.isChecked = true;
+                        self.areContactsSelected = true;
                     }
                 });
 
@@ -168,16 +172,14 @@ new Vue({
 
         showDeleteContactsConfirmationModal: function (contact) {
             if (contact) {
-                this.contactsIdsToDelete.push(contact.id);
+                this.contactsIdsToDelete.splice(0, this.contactsIdsToDelete.length, contact.id);
+                this.confirmationMessage = "Do you really want to delete the contact?";
             } else {
                 this.contactsIdsToDelete = this.getCheckedContactsIds();
-            }
 
-
-            if (this.contactsIdsToDelete.length === 0) {
-                this.showErrorMessageModal("Contacts to delete weren't selected");
-
-                return;
+                this.confirmationMessage = this.contactsIdsToDelete.length === 1
+                    ? "Do you really want to delete selected contact?"
+                    : "Do you really want to delete selected contacts?";
             }
 
             var deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);
@@ -206,12 +208,16 @@ new Vue({
             this.contacts.forEach(function (contact) {
                 contact.isChecked = self.areAllContactsChecked;
             });
+
+            this.areContactsSelected = this.getCheckedContactsIds().length > 0;
         },
 
         checkContact: function () {
             if (this.areAllContactsChecked) {
                 this.areAllContactsChecked = false;
             }
+
+            this.areContactsSelected = this.getCheckedContactsIds().length > 0;
         }
     }
 });

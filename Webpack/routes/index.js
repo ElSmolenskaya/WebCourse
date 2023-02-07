@@ -43,7 +43,7 @@ router.post("/api/createContact", function (req, res) {
     success: true,
     messages: [],
     errorsCodes: []
-  }
+  };
 
   if (!contact) {
     responseInformation.success = false;

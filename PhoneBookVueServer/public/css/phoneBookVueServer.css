@@ -50,6 +50,10 @@
     padding: 0 8px;
 }
 
+.phonebook-container thead tr {
+    height: 45px;
+}
+
 .check-contact-column,
 .delete-contact-column {
     width: 40px;

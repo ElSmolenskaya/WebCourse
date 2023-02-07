@@ -67,11 +67,14 @@
           <th scope="col">First name</th>
           <th scope="col">Phone number</th>
           <th scope="col" class="delete-contact-column">
-            <button @click="showDeleteContactsConfirmationModal()"
-                    type="button"
-                    class="delete-button btn btn-danger"
-                    title="Delete selected contacts">x
-            </button>
+            <template v-if="areContactsSelected">
+              <button @click="showDeleteContactsConfirmationModal()"
+                      type="button"
+                      class="delete-button btn btn-danger"
+                      title="Delete selected contacts">x
+              </button>
+            </template>
+            <template v-else></template>
           </th>
         </tr>
         </thead>
@@ -107,7 +110,7 @@
           </div>
           <div class="modal-body">
             <div class="alert alert-warning" role="alert">
-              <p>Do you really want to delete the contact(s)?</p>
+              <p v-text="confirmationMessage"></p>
             </div>
           </div>
           <div class="modal-footer">
@@ -158,11 +161,13 @@ export default {
       phoneNumber: "",
       isPhoneNumberInvalid: false,
       isPhoneNumberExists: false,
+      areContactsSelected: false,
       term: "",
       contactsIdsToDelete: [],
       areAllContactsChecked: false,
       service: new PhoneBookService(),
-      errorMessage: ""
+      errorMessage: "",
+      confirmationMessage: ""
     };
   },
 
@@ -179,13 +184,14 @@ export default {
 
     loadContacts() {
       this.service.getContacts(this.term).done(contacts => {
-        let checkedContactsIds = this.getCheckedContactsIds();
+        const checkedContactsIds = this.getCheckedContactsIds();
 
         contacts.forEach(contact => {
           contact.isChecked = false;
         });
 
         this.contacts = contacts;
+        this.areContactsSelected = false;
 
         checkedContactsIds.forEach(id => {
           let contact = this.contacts.find(function (contact) {
@@ -194,6 +200,7 @@ export default {
 
           if (contact) {
             contact.isChecked = true;
+            this.areContactsSelected = true;
           }
         });
 
@@ -278,17 +285,16 @@ export default {
       errorMessageModal.show();
     },
 
-    showDeleteContactsConfirmationModal(contact) {
+    showDeleteContactsConfirmationModal: function (contact) {
       if (contact) {
-        this.contactsIdsToDelete.push(contact.id);
+        this.contactsIdsToDelete.splice(0, this.contactsIdsToDelete.length, contact.id);
+        this.confirmationMessage = "Do you really want to delete the contact?";
       } else {
         this.contactsIdsToDelete = this.getCheckedContactsIds();
-      }
 
-      if (this.contactsIdsToDelete.length === 0) {
-        this.showErrorMessageModal("Contacts to delete weren't selected");
-
-        return;
+        this.confirmationMessage = this.contactsIdsToDelete.length === 1
+            ? "Do you really want to delete selected contact?"
+            : "Do you really want to delete selected contacts?";
       }
 
       const deleteConfirmationModal = new bootstrap.Modal(this.$refs.deleteConfirmDialog);
@@ -299,6 +305,8 @@ export default {
       this.service.deleteContacts(this.contactsIdsToDelete).done(response => {
         if (!response.success) {
           this.showErrorMessageModal(response.message);
+
+          return;
         }
 
         this.loadContacts();
@@ -311,12 +319,16 @@ export default {
       this.contacts.forEach(contact => {
         contact.isChecked = this.areAllContactsChecked;
       });
+
+      this.areContactsSelected = this.getCheckedContactsIds().length > 0;
     },
 
     checkContact() {
       if (this.areAllContactsChecked) {
         this.areAllContactsChecked = false;
       }
+
+      this.areContactsSelected = this.getCheckedContactsIds().length > 0;
     }
   }
 }
@@ -373,6 +385,10 @@ export default {
 
 .delete-button {
   padding: 0 8px;
+}
+
+.phonebook-container thead tr {
+  height: 45px;
 }
 
 .check-contact-column,

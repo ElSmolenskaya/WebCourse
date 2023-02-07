@@ -66,12 +66,14 @@
                     <th scope="col">First name</th>
                     <th scope="col">Phone number</th>
                     <th scope="col" class="delete-contact-column">
-                        <button @click="showDeleteContactsConfirmationModal()"
-                                type="button"
-                                class="delete-button btn btn-danger"
-                                title="Delete selected contacts">x
-                        </button>
-                    </th>
+                        <template v-if="areContactsSelected">
+                            <button @click="showDeleteContactsConfirmationModal()"
+                                    type="button"
+                                    class="delete-button btn btn-danger"
+                                    title="Delete selected contacts">x
+                            </button>
+                        </template>
+                        <template v-else></template>
                 </tr>
                 </thead>
                 <tbody v-cloak>
@@ -106,7 +108,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="alert alert-warning" role="alert">
-                            <p>Do you really want to delete the contact(s)?</p>
+                            <p v-text="confirmationMessage"></p>
                         </div>
                     </div>
                     <div class="modal-footer">

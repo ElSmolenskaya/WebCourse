@@ -52,20 +52,22 @@ new Vue({
         this.loadContacts();
     },
 
-    methods: {
-        getCheckedContactsIds: function () {
+    computed: {
+        checkedContactsIds: function () {
             return this.contacts.filter(function (contact) {
                 return contact.isChecked;
             }).map(function (contact) {
                 return contact.id;
             });
-        },
+        }
+    },
 
+    methods: {
         loadContacts: function () {
             var self = this;
 
             this.service.getContacts(this.term).done(function (contacts) {
-                var checkedContactsIds = self.getCheckedContactsIds();
+                var checkedContactsIds = self.checkedContactsIds;
 
                 contacts.forEach(function (contact) {
                     contact.isChecked = false;
@@ -172,10 +174,10 @@ new Vue({
 
         showDeleteContactsConfirmationModal: function (contact) {
             if (contact) {
-                this.contactsIdsToDelete.splice(0, this.contactsIdsToDelete.length, contact.id);
+                this.contactsIdsToDelete = [contact.id];
                 this.confirmationMessage = "Do you really want to delete the contact?";
             } else {
-                this.contactsIdsToDelete = this.getCheckedContactsIds();
+                this.contactsIdsToDelete = this.checkedContactsIds;
 
                 this.confirmationMessage = this.contactsIdsToDelete.length === 1
                     ? "Do you really want to delete selected contact?"
@@ -209,7 +211,7 @@ new Vue({
                 contact.isChecked = self.areAllContactsChecked;
             });
 
-            this.areContactsSelected = this.getCheckedContactsIds().length > 0;
+            this.areContactsSelected = this.checkedContactsIds.length > 0;
         },
 
         checkContact: function () {
@@ -217,7 +219,7 @@ new Vue({
                 this.areAllContactsChecked = false;
             }
 
-            this.areContactsSelected = this.getCheckedContactsIds().length > 0;
+            this.areContactsSelected = this.checkedContactsIds.length > 0;
         }
     }
 });

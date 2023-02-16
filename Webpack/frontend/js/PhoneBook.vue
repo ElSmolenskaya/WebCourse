@@ -83,8 +83,7 @@
                     <td>
                         <input class="form-check-input"
                                type="checkbox"
-                               v-model="contact.isChecked"
-                               @change="checkContact">
+                               v-model="contact.isChecked">
                     </td>
                     <td>{{ index + 1 }}</td>
                     <td v-text="contact.firstName"></td>
@@ -161,7 +160,6 @@ export default {
             phoneNumber: "",
             isPhoneNumberInvalid: false,
             isPhoneNumberExists: false,
-            areContactsSelected: false,
             term: "",
             contactsIdsToDelete: [],
             areAllContactsChecked: false,
@@ -176,6 +174,10 @@ export default {
             return this.contacts
                 .filter(contact => contact.isChecked)
                 .map(contact => contact.id);
+        },
+
+        areContactsSelected() {
+            return this.checkedContactsIds.length > 0;
         }
     },
 
@@ -193,20 +195,16 @@ export default {
                 });
 
                 this.contacts = contacts;
-                this.areContactsSelected = false;
 
                 checkedContactsIds.forEach(id => {
-                    let contact = this.contacts.find(function (contact) {
+                    const contact = this.contacts.find(function (contact) {
                         return contact.id === id;
                     });
 
                     if (contact) {
                         contact.isChecked = true;
-                        this.areContactsSelected = true;
                     }
                 });
-
-                this.areAllContactsChecked = false;
             }).fail(function () {
                 this.showErrorMessageModal("Contact's list hasn't been loaded");
             });
@@ -321,16 +319,6 @@ export default {
             this.contacts.forEach(contact => {
                 contact.isChecked = this.areAllContactsChecked;
             });
-
-            this.areContactsSelected = this.checkedContactsIds.length > 0;
-        },
-
-        checkContact() {
-            if (this.areAllContactsChecked) {
-                this.areAllContactsChecked = false;
-            }
-
-            this.areContactsSelected = this.checkedContactsIds.length > 0;
         }
     }
 }

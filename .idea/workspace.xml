@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
+    <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="Исправлены ошибки в модулях  PhoneBookVueServer, Webpack">
+      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MovieCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MovieDetails.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MoviesComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MoviesList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/components/moviesServiсe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vuetify/src/views/MoviesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/PhoneBookVueServer/public/js/phoneBookVueServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpack/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Webpack/frontend/js/PhoneBook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/js/PhoneBook.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/frontend/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpack/frontend/js/phoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpack/frontend/js/phoneBookService.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBookService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Webpack/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/HomeView.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +34,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -48,7 +62,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/Webpack/frontend",
+    "last_opened_file_path": "/Users/victory/Desktop/JavaProgramming/Клиентский web/WebCourse/vuetify/src/components",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,21 +78,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vuetify/src/components" />
       <recent name="$PROJECT_DIR$/Webpack/frontend" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/Webpack" />
       <recent name="$PROJECT_DIR$/Bootstrap" />
-      <recent name="$PROJECT_DIR$/Underscore" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/vuetify/src/assets" />
+      <recent name="$PROJECT_DIR$/vuetify/src/assets/images" />
+      <recent name="$PROJECT_DIR$/vuetify/dist/img" />
       <recent name="$PROJECT_DIR$/Webpack/frontend" />
-      <recent name="$PROJECT_DIR$/TodoListJQuery" />
-      <recent name="$PROJECT_DIR$/Html/resources" />
-      <recent name="$PROJECT_DIR$/CssTable" />
-      <recent name="$PROJECT_DIR$/CSS Text" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (2)">
+  <component name="RunManager" selected="npm.start">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/Webpack/frontend/package.json" />
       <command value="run" />
@@ -131,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start (1)" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start (2)" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.start (1)" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -150,14 +164,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="215987000" />
-    </task>
-    <task id="LOCAL-00009" summary="Исправлены ошибки в модуле CssTable">
-      <created>1669610494830</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1669610494830</updated>
+      <workItem from="1673514027070" duration="355628000" />
     </task>
     <task id="LOCAL-00010" summary="Исправлены ошибки в модуле CssText">
       <created>1670159936092</created>
@@ -495,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675754855186</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Исправлены ошибки в модулях  PhoneBookVueServer, Webpack">
+      <created>1675833755127</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1675833755127</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

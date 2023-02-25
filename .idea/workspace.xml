@@ -4,26 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="Исправлены ошибки в модулях  PhoneBookVueServer, Webpack">
-      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MovieCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MovieDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MoviesComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/components/MoviesList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/components/moviesServiсe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vuetify/src/views/MoviesList.vue" afterDir="false" />
+    <list default="true" id="9f51a797-cb76-44cb-9a35-f6fdcdcb70fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/vuetify/src/components/FavoriteMoviesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Webpack/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/frontend/js/PhoneBook.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/js/PhoneBook.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/frontend/js/phoneBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/frontend/js/phoneBookService.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/frontend/js/phoneBookService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Webpack/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Webpack/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/MovieCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/components/MovieCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/MovieDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/components/MovieDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/MoviesComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/MoviesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/components/MoviesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/components/moviesServiсe.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/components/moviesServiсe.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/plugins/vuetify.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vuetify/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vuetify/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vuetify/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/AboutView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vuetify/src/views/MoviesList.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,14 +162,7 @@
       <workItem from="1668679652044" duration="65493000" />
       <workItem from="1669383275744" duration="348832000" />
       <workItem from="1673501775523" duration="1186000" />
-      <workItem from="1673514027070" duration="355628000" />
-    </task>
-    <task id="LOCAL-00010" summary="Исправлены ошибки в модуле CssText">
-      <created>1670159936092</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1670159936092</updated>
+      <workItem from="1673514027070" duration="529790000" />
     </task>
     <task id="LOCAL-00011" summary="Исправлены ошибки в модуле Html">
       <created>1670161129758</created>
@@ -509,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675833755127</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Исправлены ошибки в модуле Webpack, добавлен модуль vuetify">
+      <created>1676548829338</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1676548829338</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +526,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Исправлены ошибки в модулях TodoList и TodoListJQuery" />
     <MESSAGE value="Исправлены ошибки в модуле TemperatureConverter" />
     <MESSAGE value="Разработка модуля PhoneBook" />
     <MESSAGE value="Разработка модуля Underscore" />
@@ -553,7 +550,8 @@
     <MESSAGE value="Доработаны модальные окна в модуле PhoneBookVueServer" />
     <MESSAGE value="Исправлены ошибки в модулях PhoneBookVue, PhoneBookVueServer, Webpack. Функционал задачи Webpack приведен к функционалу задачи PhoneBookVueServer." />
     <MESSAGE value="Исправлены ошибки в модулях  PhoneBookVueServer, Webpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модулях  PhoneBookVueServer, Webpack" />
+    <MESSAGE value="Исправлены ошибки в модуле Webpack, добавлен модуль vuetify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены ошибки в модуле Webpack, добавлен модуль vuetify" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

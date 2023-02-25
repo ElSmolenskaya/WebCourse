@@ -1,28 +1,75 @@
 <template>
     <v-app id="app">
-        <v-app-bar app shrink-on-scroll>
+        <v-app-bar class="blue-grey" app shrink-on-scroll short>
 
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon
+                @click.stop="drawer = !drawer"
+                class="white--text pt-0"
+            />
 
-            <v-toolbar-title class="pb-2">Movies</v-toolbar-title>
+            <v-navigation-drawer v-model="drawer" absolute bottom temporary>
+                <v-list-item-group v-model="group">
+                    <v-list-item link>
+                        <router-link
+                            :to="'/'"
+                            class="text-decoration-none"
+                        >
+                            <v-list-item-title>
+                                <v-icon class="pr-4 pb-1" size="25">mdi-home</v-icon>
+                                Movies
+                            </v-list-item-title>
+                        </router-link>
+                    </v-list-item>
+                    <v-list-item link>
+                        <router-link
+                            :to="'/favorite/movies'"
+                            class="text-decoration-none"
+                        >
+                            <v-list-item-title>
+                                <v-icon class="pr-5 pb-1" size="21">mdi-heart</v-icon>
+                                Favorite movies
+                            </v-list-item-title>
+                        </router-link>
+                    </v-list-item>
+                </v-list-item-group>
+            </v-navigation-drawer>
 
-            <v-spacer></v-spacer>
+            <v-toolbar-title class="pb-2">
+                <router-link :to="'/'" class="text-decoration-none">
+                    <v-btn class="border_clear transparent white--text" elevation="0" :height="32">
+                        Movies
+                    </v-btn>
+                </router-link>
+            </v-toolbar-title>
 
+            <v-spacer/>
+
+            <router-link :to="'/favorite/movies'" class="text-decoration-none">
+                <v-btn class="border_clear transparent white--text" title="Show favorite movies" icon>
+                    <v-icon size="22">mdi-heart</v-icon>
+                </v-btn>
+            </router-link>
         </v-app-bar>
 
         <v-main>
-            <router-view></router-view>
+            <router-view/>
         </v-main>
     </v-app>
 </template>
 
 <script>
-
 export default {
-    name: 'App',
+    name: "App",
 
     data: () => ({
-        //
+        drawer: false,
+        group: null,
     }),
-};
+
+    watch: {
+        group() {
+            this.drawer = false
+        },
+    }
+}
 </script>

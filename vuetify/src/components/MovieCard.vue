@@ -1,47 +1,91 @@
 <template>
-    <v-card
-        width="200"
-        height="380"
-    >
-        <v-img
-            height="260"
-            :lazy-src=defaultPosterPath
-            :src=posterPath
-            cover
+    <v-hover v-slot="{ hover }">
+        <v-card
+            class="mx-auto overflow-auto"
+            :elevation="hover ? 24 : 2"
+            :height="cardHeight ? cardHeight : 390"
+            max-width="200"
         >
-            <v-row justify="space-between" class="text-right">
-                <v-col>
-                    <v-btn size="small" color="surface-variant" variant="text" icon>
-                        <v-icon color="white">mdi-heart</v-icon>
-                    </v-btn>
-                </v-col>
-            </v-row>
-        </v-img>
+            <router-link :to="'/movie/details/'+movieId">
+                <v-img
+                    :lazy-src=defaultPosterPath
+                    :src=posterPath
+                    min-height="260"
+                />
 
-        <v-card-title class="movie-title pt-1 mt-1 text">
-            <router-link :to="'Movie/Details/'+movieId" v-text="title"></router-link>
-        </v-card-title>
+                <div class="pl-2 pr-2 pt-1 movie-title" v-text="title"/>
+            </router-link>
 
-        <v-card-subtitle class="genres" v-text="genres"></v-card-subtitle>
+            <v-card-subtitle class="pl-2 pr-2 pb-1 genres" v-text="genres"/>
 
-    </v-card>
+            <v-fab-transition>
+                <v-btn
+                    class="favorite-button"
+                    @click="addToFavorite"
+                    fab
+                    small
+                    dark
+                    icon
+                >
+                    <template v-if="isFavorite">
+                        <v-icon color="red" title="Remove from favorite list">mdi-heart</v-icon>
+                    </template>
+                    <template v-else>
+                        <v-icon color="white" title="Add to favorite list">mdi-heart</v-icon>
+                    </template>
+                </v-btn>
+            </v-fab-transition>
+        </v-card>
+    </v-hover>
 </template>
 
 <script>
 export default {
     name: "MovieCard",
-    props: ["movieId", "title", "genres", "posterPath", "defaultPosterPath"]
+    props: ["movieId", "title", "genres", "posterPath", "defaultPosterPath", "cardHeight"],
+
+    computed: {
+        isFavorite() {
+            return this.$store.state.favoriteMovies.find(movie => {
+                return movie.id === this.movieId;
+            });
+        }
+    },
+
+    methods: {
+        addToFavorite() {
+            if (this.isFavorite) {
+                this.$store.dispatch("deleteFavoriteMovie", this.movieId);
+            } else {
+                const movie = {
+                    id: this.movieId,
+                    title: this.title,
+                    genres: this.genres,
+                    posterPath: this.posterPath
+                };
+
+                this.$store.dispatch("addFavoriteMovie", movie);
+            }
+        }
+    }
 }
 </script>
 
 <style lang="scss">
 .movie-title {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.2em;
+    word-wrap: normal;
 }
 
 .genres {
-    padding-top: 10px;
+    padding-top: 5px;
     line-height: 1.2em;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 </style>
